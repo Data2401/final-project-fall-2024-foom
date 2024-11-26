@@ -1,0 +1,319 @@
+﻿Town,Name,Season,Location,Rarity,Currency,Sell Price,MP,HP
+Sun Haven,Acorn Anchovy,Fall,Sea,Uncommon,Gold,18,20,
+Sun Haven,Angel Fish,Any,Sea,Rare,Gold,54,15,
+Sun Haven,Autumn Leaf  Fish,Fall,Wilderness,Epic,Gold,216,,40
+Sun Haven,Autumn Leaf  Fish,Fall,Farm,Epic,Gold,216,,40
+Sun Haven,Autumn Leaf  Fish,Fall,Town ,Epic,Gold,216,,40
+Sun Haven,Autumn Leaf  Fish,Fall,Forest,Epic,Gold,216,,40
+Sun Haven,Averagemouth Bass,Any,Wilderness,Common,Gold,22,,15
+Sun Haven,Averagemouth Bass,Any,Forest,Forest,Gold,22,,15
+Sun Haven,Bashful Pike,Any,Sea,Common,Gold,23,,10
+Sun Haven,Bitterling,Any,Wilderness,Common,Gold,18,,
+Sun Haven,Bitterling,Any,Farm,Common,Gold,18,,
+Sun Haven,Bitterling,Any,Town ,Common,Gold,18,,
+Sun Haven,Bitterling,Any,Forest,Common,Gold,18,,
+Sun Haven,Black Bass,Any,Wilderness,Uncommon,Gold,32,,10
+Sun Haven,Black Bass,Any,Farm,Uncommon,Gold,32,,10
+Sun Haven,Black Bass,Any,Town ,Uncommon,Gold,32,,10
+Sun Haven,Black Bass,Any,Forest,Uncommon,Gold,32,,10
+Sun Haven,Blazeel,Summer,Sea,Rare,Gold,60,,35
+Sun Haven,Blazing Herring,Winter,Sea,Epic,Gold,180,,40
+Sun Haven,Blooming Bass,Spring,Sea,Common,Gold,16,10,
+Sun Haven,Blue Gill,Any ,Wilderness,Common,Gold,23,10,
+Sun Haven,Blue Gill,Any ,Farm,Common,Gold,23,10,
+Sun Haven,Blue Gill,Any ,Town ,Common,Gold,23,10,
+Sun Haven,Blue Gill,Any ,Forest,Common,Gold,23,10,
+Sun Haven,Blue Tang,Any,Sea,Common,Gold,22,,10
+Sun Haven,Blunted Swordfish,Any,Sea,Rare,Gold,78,,19
+Sun Haven,Bomb Fish,Any,Sea,Epic,Gold,30,,
+Sun Haven,Bucketfish,Any,Sewer,Rare,Gold,50,,
+Sun Haven,Butterflyfish,Spring,Sea,Uncommon,Gold,24,,20
+Sun Haven,Carp,Any,Wilderness,Rare,Gold,54,,19
+Sun Haven,Carp,Any,Farm,Rare,Gold,54,,19
+Sun Haven,Carp,Any,Town ,Rare,Gold,54,,19
+Sun Haven,Carp,Any,Forest,Rare,Gold,54,,19
+Sun Haven,Catfish,Any,Wilderness,Uncommon,Gold,28,10,
+Sun Haven,Catfish,Any,Farm,Uncommon,Gold,28,10,
+Sun Haven,Catfish,Any,Town ,Uncommon,Gold,28,10,
+Sun Haven,Catfish,Any,Forest,Uncommon,Gold,28,10,
+Sun Haven,Christmas Lightfish,Winter,Wilderness,Legendary,Gold,1300,,50
+Sun Haven,Christmas Lightfish,Winter,Farm,Legendary,Gold,1300,,50
+Sun Haven,Christmas Lightfish,Winter,Town ,Legendary,Gold,1300,,50
+Sun Haven,Christmas Lightfish,Winter,Forest,Legendary,Gold,1300,,50
+Sun Haven,Chromafin,Any,Wilderness,Legendary,Gold,800,45,
+Sun Haven,Chromafin,Any,Farm,Legendary,Gold,800,45,
+Sun Haven,Chromafin,Any,Town ,Legendary,Gold,800,45,
+Sun Haven,Chromafin,Any,Forest,Legendary,Gold,800,45,
+Sun Haven,Clown Fish,Any,Sea,Uncommon,Gold,29,10,
+Sun Haven,Coalfish,Winter,Wilderness,Common,Gold,20,10,
+Sun Haven,Coalfish,Winter,Farm,Common,Gold,20,10,
+Sun Haven,Coalfish,Winter,Town ,Common,Gold,20,10,
+Sun Haven,Coalfish,Winter,Forest,Common,Gold,20,10,
+Sun Haven,Coducopia,Fall,Wilderness,Legendary,Gold,810,,80
+Sun Haven,Coducopia,Fall,Farm,Legendary,Gold,810,,80
+Sun Haven,Coducopia,Fall,Town,Legendary,Gold,810,,80
+Sun Haven,Coducopia,Fall,Forest,Legendary,Gold,810,,80
+Sun Haven,Crab,Any,Sea,Common,Gold,23,,10
+Sun Haven,Cuddlefish,Any,Sea,Rare,Gold,60,16,
+Sun Haven,Dorado,Any,Wilderness,Common,Gold,20,10,
+Sun Haven,Dorado,Any,Farm,Common,Gold,20,10,
+Sun Haven,Dorado,Any,Town,Common,Gold,20,10,
+Sun Haven,Dorado,Any,Forest,Common,Gold,20,10,
+Sun Haven,Earlygator,Any,Sewer,Epic,Gold,190,,55
+Sun Haven,Eel,Any,Forest,Rare,Gold,60,16,
+Sun Haven,Eel,Any,Sea,Rare,Gold,60,16,
+Sun Haven,Flame Ray,Summer,Sea,Epic,Gold,216,,40
+Sun Haven,Floral Trout,Spring,Wilderness,Epic,Gold,216,40,
+Sun Haven,Floral Trout,Spring,Farm,Epic,Gold,216,40,
+Sun Haven,Floral Trout,Spring,Town,Epic,Gold,216,40,
+Sun Haven,Floral Trout,Spring,Forest,Epic,Gold,216,40,
+Sun Haven,Flower Flounder,Spring,Sea,Rare,Gold,60,35,
+Sun Haven,Frostfin,Winter,Wilderness,Town,Gold,24,,10
+Sun Haven,Frostfin,Winter,Farm,Town,Gold,24,,10
+Sun Haven,Frostfin,Winter,Town,Town,Gold,24,,10
+Sun Haven,Frostfin,Winter,Forest,Town,Gold,24,,10
+Sun Haven,Frozen Tuna,Winter,Sea,Rare,Gold,72,35,
+Sun Haven,Ghostfish,Fall,Wilderness,Epic,Gold,360,40,
+Sun Haven,Ghostfish,Fall,Farm,Epic,Gold,360,40,
+Sun Haven,Ghostfish,Fall,Town ,Epic,Gold,360,40,
+Sun Haven,Ghostfish,Fall,Forest,Epic,Gold,360,40,
+Sun Haven,Gold Fish,Any,Farm,Common,Gold,36,10,
+Sun Haven,Gold Fish,Any,Town,Common,Gold,36,10,
+Sun Haven,Gold Fish,Any,Sea,Common,Gold,36,10,
+Sun Haven,Golden Carp,Any,Farm,Legendary,Gold,850,60,
+Sun Haven,Golden Carp,Any,Town,Legendary,Gold,850,60,
+Sun Haven,Golden Carp,Any,Sea,Legendary,Gold,850,60,
+Sun Haven,Haloopbut,Any,Sewer,Rare,Gold,30,,18
+Sun Haven,Hayfish,Fall,Wilderness,Uncommon,Gold,66,,10
+Sun Haven,Hayfish,Fall,Farm,Uncommon,Gold,66,,10
+Sun Haven,Hayfish,Fall,Town,Uncommon,Gold,66,,10
+Sun Haven,Hayfish,Fall,Forest,Uncommon,Gold,66,,10
+Sun Haven,Hearth Angler,Summer,Sea,Legendary,Gold,900,,80
+Sun Haven,Heatfin,Winter,Wilderness,Rare,Gold,54,,35
+Sun Haven,Heatfin,Winter,Farm,Rare,Gold,54,,35
+Sun Haven,Heatfin,Winter,Town,Rare,Gold,54,,35
+Sun Haven,Heatfin,Winter,Forest,Rare,Gold,54,,35
+Sun Haven,Holly Carp,Winter,Wilderness,Rare,Gold,60,,35
+Sun Haven,Holly Carp,Winter,Farm,Rare,Gold,60,,35
+Sun Haven,Holly Carp,Winter,Town,Rare,Gold,60,,35
+Sun Haven,Icicle Carp,Winter,Sea,Epic,Gold,240,,40
+Sun Haven,Inferno Guppy,Summer,Wilderness,Common,Gold,14,,10
+Sun Haven,Inferno Guppy,Summer,Farm,Common,Gold,14,,10
+Sun Haven,Inferno Guppy,Summer,Town,Common,Gold,14,,10
+Sun Haven,Inferno Guppy,Summer,Forest,Common,Gold,14,,10
+Sun Haven,Ironhead Sturgeon,Any,Sea,Rare,Gold,54,,18
+Sun Haven,Jingle Bass,Winter,Sea,Legendary,Gold,815,,80
+Sun Haven,King Salmon,Fall,Sea,Legendary,Gold,1190,,80
+Sun Haven,Koi Fish,Any,Farm,Epic,Gold,234,20,
+Sun Haven,Koi Fish,Any,Town,Epic,Gold,234,20,
+Sun Haven,Koi Fish,Any,Forest,Epic,Gold,234,20,
+Sun Haven,Lobster,Any,Sea,Rare,Gold,66,20,
+Sun Haven,Magma Star,Summer,Sea,Rare,Gold,72,35,
+Sun Haven,Molten Slug,Summer,Wilderness,Rare,Gold,48,35,
+Sun Haven,Molten Slug,Summer,Farm,Rare,Gold,48,35,
+Sun Haven,Molten Slug,Summer,Town,Rare,Gold,48,35,
+Sun Haven,Molten Slug,Summer,Forest,Rare,Gold,48,35,
+Sun Haven,Mud Catfish,Spring,Wilderness,Common,Gold,15,,10
+Sun Haven,Mud Catfish,Spring,Farm,Common,Gold,15,,10
+Sun Haven,Mud Catfish,Spring,Town,Common,Gold,15,,10
+Sun Haven,Mud Catfish,Spring,Forest,Common,Gold,15,,10
+Sun Haven,Neon Tetra,Spring,Sea,Legendary,Gold,1615,,80
+Sun Haven,Northern Pike,Winter,Sea,Common,Gold,14,,10
+Sun Haven,Painted Egg,Spring,Wilderness,Rare,Gold,120,,50
+Sun Haven,Painted Egg,Spring,Farm,Rare,Gold,120,,50
+Sun Haven,Painted Egg,Spring,Town,Rare,Gold,120,,50
+Sun Haven,Painted Egg,Spring,Forest,Rare,Gold,120,,50
+Sun Haven,Pirate Perch,Fall,Wilderness,Rare,Gold,83,,35
+Sun Haven,Pirate Perch,Fall,Farm,Rare,Gold,83,,35
+Sun Haven,Pirate Perch,Fall,Town,Rare,Gold,83,,35
+Sun Haven,Pirate Perch,Fall,Forest,Rare,Gold,83,,35
+Sun Haven,Popeye Goldfish,Any,Farm,Uncommon,Gold,28,,10
+Sun Haven,Popeye Goldfish,Any,Town,Uncommon,Gold,28,,10
+Sun Haven,Popeye Goldfish,Any,Forest,Uncommon,Gold,28,,10
+Sun Haven,Pufferfish,Any,Sea,Common,Gold,52,N/A,N/A
+Sun Haven,Pumpkin Jelly,Fall,Sea,Rare,Gold,65,35,
+Sun Haven,Pygmy Tuna,Any,Farm,Uncommon,Gold,31,,10
+Sun Haven,Pygmy Tuna,Any,Town,Uncommon,Gold,31,,10
+Sun Haven,Pygmy Tuna,Any,Sea,Uncommon,Gold,31,,10
+Sun Haven,Pyrelus,Summer,Sea,Legendary,Gold,800,,80
+Sun Haven,Rainbow Trout,Any,Wilderness,Common,Gold,31,15,
+Sun Haven,Rainbow Trout,Any,Town,Common,Gold,31,15,
+Sun Haven,Rainbow Trout,Any,Farm,Common,Gold,31,15,
+Sun Haven,Rainbow Trout,Any,Forest,Common,Gold,31,15,
+Sun Haven,Raincloud Ray,Spring,Sea,Rare,Gold,72,,35
+Sun Haven,Red Snapper,Any,Wilderness,Rare,Gold,72,15,
+Sun Haven,Red Snapper,Any,Forest,Rare,Gold,72,15,
+Sun Haven,Red Tie Guppy,Any,Wilderness,Common,Gold,21,5,
+Sun Haven,Red Tie Guppy,Any,Town,Common,Gold,21,5,
+Sun Haven,Red Tie Guppy,Any,Farm,Common,Gold,21,5,
+Sun Haven,Red Tie Guppy,Any,Forest,Common,Gold,21,5,
+Sun Haven,Redeye Piranha,Any,Wilderness,Epic,Gold,216,,20
+Sun Haven,Ribbon Eel,Any,Sea,Epic,Gold,228,20,
+Sun Haven,Rock Bass,Winter,Sea,Common,Gold,15,50,
+Sun Haven,Royal Herring ,Any,Sea,Legendary,Gold,750,50,
+Sun Haven,Salmon,Any,Wilderness,Uncommon,Gold,35,10,
+Sun Haven,Salmon,Any,Forest,Uncommon,Gold,35,10,
+Sun Haven,Salmon,Any,Sea,Uncommon,Gold,35,10,
+Sun Haven,Sandstone Fish,Any,Sandstone,Epic,Gold,42,10,10
+Sun Haven,Sandstone Fish,Any,Quarry,Epic,Gold,42,10,10
+Sun Haven,Scarffish,Winter,Wildnerss,Uncommon,Gold,30,,20
+Sun Haven,Scarffish,Winter,Farm,Uncommon,Gold,30,,20
+Sun Haven,Scarffish,Winter,Town,Uncommon,Gold,30,,20
+Sun Haven,Scarffish,Winter,Forest,Uncommon,Gold,30,,20
+Sun Haven,Scorching Squid,Summer,Sea,Uncommon,Gold,28,,20
+Sun Haven,Sea Bass,Any,Sea,Common,Gold,23,10,
+Sun Haven,Seahorse,Spring,Sea,Epic,Gold,180,,40
+Sun Haven,Searback,Summer,Wilderness,Uncommon,Gold,28,,20
+Sun Haven,Searback,Summer,Farm,Uncommon,Gold,28,,20
+Sun Haven,Searback,Summer,Town,Uncommon,Gold,28,,20
+Sun Haven,Searback,Summer,Forest,Uncommon,Gold,28,,20
+Sun Haven,Silver Carp,Any,Wilderness,Rare,Gold,60,18,
+Sun Haven,Silver Carp,Any,Farm,Rare,Gold,60,18,
+Sun Haven,Silver Carp,Any,Town,Rare,Gold,60,18,
+Sun Haven,Silver Carp,Any,Forest,Rare,Gold,60,18,
+Sun Haven,Squawkmouth Bass,Any,Sewer,Common,Gold,18,10,
+Sun Haven,Streamline Cod,Any,Sea,Uncommon,Gold,34,10,
+Sun Haven,Sunfish,Spring,Sea,Rare,Gold,60,,35
+Sun Haven,Tadpole,Spring,Wilderness,Uncommon,Gold,36,,20
+Sun Haven,Tadpole,Spring,Farm,Uncommon,Gold,36,,20
+Sun Haven,Tadpole,Spring,Town,Uncommon,Gold,36,,20
+Sun Haven,Tadpole,Spring,Forest,Uncommon,Gold,36,,20
+Sun Haven,Tiger Trout,Any,Wilderness,Rare,Gold,50,,20
+Sun Haven,Tiger Trout,Any,Farm,Rare,Gold,50,,20
+Sun Haven,Tiger Trout,Any,Town,Rare,Gold,50,,20
+Sun Haven,Tiger Trout,Any,Forest,Rare,Gold,50,,20
+Sun Haven,Tinder Turtle,Summer,Wilderness,Epic,Gold,216,,40
+Sun Haven,Tinder Turtle,Summer,Farm,Epic,Gold,216,,40
+Sun Haven,Tinder Turtle,Summer,Town,Epic,Gold,216,,40
+Sun Haven,Tinder Turtle,Summer,Forest,Epic,Gold,216,,40
+Sun Haven,Trick or Trout,Fall,Wilderness,Common,Gold,16,10,
+Sun Haven,Trick or Trout,Fall,Farm,Common,Gold,16,10,
+Sun Haven,Trick or Trout,Fall,Town,Common,Gold,16,10,
+Sun Haven,Trick or Trout,Fall,Forest,Common,Gold,16,10,
+Sun Haven,Tuna,Any,Sea,Rare,Gold,54,,20
+Sun Haven,Turkeyfish,Fall,Sea,Common,Gold,8,,10
+Sun Haven,Vampire Piranha,Fall,Wilderness,Epic,Gold,180,,40
+Sun Haven,Vampire Piranha,Fall,Farm,Epic,Gold,180,,40
+Sun Haven,Vampire Piranha,Fall,Town,Epic,Gold,180,,40
+Sun Haven,Vampire Piranha,Fall,Forest,Epic,Gold,180,,40
+Sun Haven,Whitebelly,Any,Sea,Epic,Gold,270,,20
+NelVari,Angelfin,Any,Town,Legendary,Mana Orb,18,70,
+NelVari,Angelfin,Any,Farm,Legendary,Mana Orb,18,70,
+NelVari,Axolotl,Any,Forest,Uncommon,Mana Orb,10,20,
+NelVari,Bark Fish ,Any,Forest,Common,Mana Orb,3,15,
+NelVari,Bubblefish,Any,Forest,Legendary,Mana Orb,19,70,
+NelVari,Crystal Tetra,Any,Town,Legendary,Mana Orb,17,70,
+NelVari,Crystal Tetra,Any,Farm,Legendary,Mana Orb,17,70,
+NelVari,Dragon Gulper,Any,Town,Rare,Mana Orb,6,30,
+NelVari,Dragon Gulper,Any,Farm ,Rare,Mana Orb,6,30,
+NelVari,Dragon Gulper,Any,Forest,Rare,Mana Orb,6,30,
+NelVari,Flamefish,Any,Town,Rare,Mana Orb,7,30,
+NelVari,Flamefish,Any,Farm,Rare,Mana Orb,7,30,
+NelVari,Flamefish,Any,Forest,Rare,Mana Orb,7,30,
+NelVari,Frilled Betta,Any,Town,Uncommon,Mana Orb,6,20,
+NelVari,Frilled Betta,Any,Farm,Uncommon,Mana Orb,6,20,
+NelVari,Frilled Betta,Any,Forest,Uncommon,Mana Orb,6,20,
+NelVari,Fungus Fish,Any,Forest,Common,Mana Orb,4,15,
+NelVari,Horesefish,Any,Town,Uncommon,Mana Orb,5,20,
+NelVari,Horesefish,Any,Farm,Uncommon,Mana Orb,5,20,
+NelVari,Horesefish,Any,Forest,Uncommon,Mana Orb,5,20,
+NelVari,Kelp Eel,Any,Town,Epic,Mana Orb,7,40,
+NelVari,Kelp Eel,Any,Farm,Epic,Mana Orb,7,40,
+NelVari,Kelp Eel,Any,Forest,Epic,Mana Orb,7,40,
+NelVari,Leaf Sole,Any,Forest,Common,Mana Orb,3,15,
+NelVari,Neapolitan Fish,Any,Town,Rare,Mana Orb,8,30,
+NelVari,Neapolitan Fish,Any,Farm,Rare,Mana Orb,8,30,
+NelVari,Princely Frog,Any,Town,Epic,Mana Orb,12,40,
+NelVari,Princely Frog,Any,Farm,Epic,Mana Orb,12,40,
+NelVari,Robed Parrotfish,Any,Town,Uncommon,Mana Orb,5,20,
+NelVari,Robed Parrotfish,Any,Farm,Uncommon,Mana Orb,5,20,
+NelVari,Robed Parrotfish,Any,Forest,Uncommon,Mana Orb,5,20,
+NelVari,Royal Koi,Any,Forest,Epic,Mana Orb,8,40,
+NelVari,Sky Ray,Any,Forest,Legendary,Mana Orb,17,70,
+NelVari,Snobfish,Any,Town,Rare,Mana Orb,5,30,
+NelVari,Snobfish,Any,Farm,Rare,Mana Orb,5,30,
+NelVari,Snobfish,Any,Forest,Rare,Mana Orb,5,30,
+NelVari,Unicornfish,Any,Town,Common,Mana Orb,3,15,
+NelVari,Unicornfish,Any,Farm,Common,Mana Orb,3,15,
+NelVari,Unicornfish,Any,Forest,Common,Mana Orb,3,15,
+NelVari,Velveteen Betta,Any,Town,Common,Mana Orb,4,15,
+NelVari,Velveteen Betta,Any,Farm,Common,Mana Orb,4,15,
+Withergate,Albino Squid ,Any,Town,Legendary,Ticket,23,,80
+Withergate,Albino Squid ,Any,Farm,Legendary,Ticket,23,,80
+Withergate,Bonemouth Bass,Any,Town,Uncommon,Ticket,4,25,
+Withergate,Bonemouth Bass,Any,Farm,Uncommon,Ticket,4,25,
+Withergate,Bonemouth Bass,Any,Sewer,Uncommon,Ticket,4,25,
+Withergate,Brain Jelly,Any,Sewer,Uncommon,Ticket,10,30,
+Withergate,Brain Jelly,Any,Forest,Uncommon,Ticket,10,30,
+Withergate,Creepfish,Any,Forest,Common,Ticket,5,25,
+Withergate,Deadeye Shrimp,Any,Town,Uncommon,Ticket,4,,25
+Withergate,Deadeye Shrimp,Any,Farm,Uncommon,Ticket,4,,25
+Withergate,Deadeye Shrimp,Any,Forest,Uncommon,Ticket,4,,25
+Withergate,Devilfin,Any,Town,Legendary,Ticket,23,,80
+Withergate,Devilfin,Any,Farm,Legendary,Ticket,23,,80
+Withergate,Dumbo Octupus,Any,Town,Common,Ticket,8,,25
+Withergate,Dumbo Octupus,Any,Farm,Common,Ticket,8,,25
+Withergate,Dumbo Octupus,Any,Forest,Common,Ticket,8,,25
+Withergate,Duorado,Any,Town,Common,Ticket,6,,25
+Withergate,Duorado,Any,Farm,Common,Ticket,6,,25
+Withergate,Duorado,Any,Sewer,Common,Ticket,6,,25
+Withergate,Eel Like Thing,Any,Town,Epic,Ticket,11,40,
+Withergate,Eel Like Thing,Any,Farm,Epic,Ticket,11,40,
+Withergate,Electric Eel,Any,Town,Uncommon,Ticket,10,20,
+Withergate,Electric Eel,Any,Farm,Uncommon,Ticket,10,20,
+Withergate,Ghosthead Tuna,Any,Sewer,Rare,Ticket,16,,35
+Withergate,Ghosthead Tuna,Any,Forest,Rare,Ticket,16,,35
+Withergate,Ghoul Fish,Any,Forest,Rare,Ticket,6,25,
+Withergate,Globfish,Any,Town,Rare,Ticket,8,,35
+Withergate,Globfish,Any,Farm,Rare,Ticket,8,,35
+Withergate,Globfish,Any,Sewer,Rare,Ticket,8,,35
+Withergate,Goblin Shark,Any,Town,Epic,Ticket,10,,10
+Withergate,Goblin Shark,Any,Farm,Epic,Ticket,10,,10
+Withergate,Goblin Shark,Any,Forest,Epic,Ticket,10,,10
+Withergate,Jack o fin,Any,Town,Common,Ticket,8,,25
+Withergate,Jack o fin,Any,Farm,Common,Ticket,8,,25
+Withergate,Jack o fin,Any,Forest,Common,Ticket,8,,25
+Withergate,Kraken,Any,Town,Uncommon,Ticket,7,25,
+Withergate,Kraken,Any,Farm,Uncommon,Ticket,7,25,
+Withergate,Kraken,Any,Forest,Uncommon,Ticket,7,25,
+Withergate,Living Jelly,Any,Town,Rare,Ticket,7,35,
+Withergate,Living Jelly,Any,Farm,Rare,Ticket,7,35,
+Withergate,Living Jelly,Any,Forest,Rare,Ticket,7,35,
+Withergate,Living Jelly,Any,Midnight,Rare,Ticket,7,35,
+Withergate,Living Jelly,Any,Isle,Rare,Ticket,7,35,
+Withergate,Moonfish,Any,Town,Epic,Ticket,11,40,
+Withergate,Moonfish,Any,Farm,Epic,Ticket,11,40,
+Withergate,Moonfish,Any,Forest,Epic,Ticket,11,40,
+Withergate,Mummy Trout,Any,Town,Uncommon,Ticket,4,,25
+Withergate,Mummy Trout,Any,Farm,Uncommon,Ticket,4,,25
+Withergate,Mummy Trout,Any,Sewer ,Uncommon,Ticket,4,,25
+Withergate,Mummy Trout,Any,Forest,Uncommon,Ticket,4,,25
+Withergate,Purrmaid,Any,Town,Rare,Ticket,8,35,
+Withergate,Purrmaid,Any,Farm,Rare,Ticket,8,35,
+Withergate,Purrmaid,Any,Forest,Rare,Ticket,8,35,
+Withergate,Purrmaid,Any,Midnight,Rare,Ticket,8,35,
+Withergate,Refinned Pincher,Any,Forest,Uncommon,Ticket,10,,25
+Withergate,Sea Bat,Any,Town,Uncommon,Ticket,5,25,
+Withergate,Sea Bat,Any,Farm,Uncommon,Ticket,5,25,
+Withergate,Sea Bat,Any,Sewer ,Uncommon,Ticket,5,25,
+Withergate,Sea Bat,Any,Forest,Uncommon,Ticket,5,25,
+Withergate,Shadow Tuna,Any,Town,Legendary,Ticket,28,70,
+Withergate,Shadow Tuna,Any,Farm,Legendary,Ticket,28,70,
+Withergate,Shadow Tuna,Any,Sewer,Legendary,Ticket,28,70,
+Withergate,Shadow Tuna,Any,Forest,Legendary,Ticket,28,70,
+Withergate,Shadow Tuna,Any,Midnight Isle,Legendary,Ticket,28,70,
+Withergate,Slime Leech,Any,Sewer,Legendary,Ticket,8,,35
+Withergate,Slime Leech,Any,Forest,Legendary,Ticket,8,,35
+Withergate,Slime Leech,Any,Midnight Isle,Rare,Ticket,8,,35
+Withergate,Spiked Salmon,Any,Sewer,Common,Ticket,6,,25
+Withergate,Spiked Salmon,Any,Forest,Common,Ticket,6,,25
+Withergate,Toothy Angler,Any,Sewer,Epic,Ticket,9,,40
+Withergate,Toothy Angler,Any,Midnight Isle,Epic,Ticket,9,,40
+Withergate,Vampire Squid ,Any,Sewer ,Epic,Ticket,10,,50
+Withergate,Viperfish,Any,Town,Epic,Ticket,13,,40
+Withergate,Viperfish,Any,Farm,Epic,Ticket,13,,40
+Withergate,Viperfish,Any,Sewer,Epic,Ticket,13,,40
+Withergate,Water Bear,Any,Sewer,Uncommon,Ticket,4,,25
+Withergate,Zombie Fish,Any,Sewer,Common,Ticket,4,,25
+Withergate,Zombie Fish,Any,Forest,Common,Ticket,4,,25
+Withergate,Zombie Fish,Any,Farm,Common,Ticket,4,,25

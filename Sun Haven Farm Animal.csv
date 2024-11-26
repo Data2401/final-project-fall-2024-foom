@@ -1,0 +1,5 @@
+﻿Town,Animal,Item,MP,HP,Currency,Sell Price,Stat,Stat Boost
+Sun Haven,Cow,Milk,30,,Gold,175,Mana,small
+Sun Haven,Cow,Golden Milk,,15,Gold,385,Mana,very small
+Sun Haven,Chicken ,Egg,,15,Gold,120,Mana,small
+Sun Haven,Chicken ,Golden Egg,,15,Gold,265,Health,small
