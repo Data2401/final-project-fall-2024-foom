@@ -1,0 +1,226 @@
+---
+title: 'Sun Haven: More Mana'
+author: "Phung Tran"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Sun Haven is a farming rpg similar to more popular titles such as Stardew Valley and Harvest Moon. Players must balance there time between farming, crafting, and exploration to improve their farm and player stats. By permanently boosting your stats, such as mana, players can optimize there gameplay. 
+
+To permanently boost your mana stat, there are many events or random objects that the player can find. However, the most mainline way to do this would be to eat. Whether it be foragables or cooked foods, eating is the most basic way to raise mana, making it important to manage your resources. Specifically because having more mana let's you cast spells that make farming/combat and traveling more efficient.
+
+Whether its after the first year of game play or beginning of the game, having this information will save resources for making more storage containers and saves space in your home. Just like other games in this genre, you need supplies and space to create the storage. While the game might give you three homes/farms to travel through, those same resources can be used for other crafts such as weapons/armor and furnace materials. 
+
+It can be hard to keep track of what foods are the most ideal to constantly stack up on. This also means you have to mine more ore and wood, with wood specifically needing more time to regrow. By looking through the charts presented, we can get useful knowledge about how to proceed with resource management to increase mana to optimize game play
+
+```{r Installed_Packages, message=FALSE, warning=FALSE, include=FALSE}
+
+install.packages("janitor", repos = "https://cloud.r-project.org/") # Used to clean up cvs files
+install.packages("wesanderson", repos = "https://cloud.r-project.org/") # wes anderson color palettes
+install.packages("extrafont", repos = "https://cloud.r-project.org/") # more fonts to choose from 
+install.packages("gridExtra", repos = "https://cloud.r-project.org/") # Used to make 2x2 graphs because plotly is being used 
+install.packages("cowplot", repos = "https://cloud.r-project.org/") # Used to extract legend from a plot and place on 2x2 grid 
+
+# had to use repos = , in order to knit docuemnt. 
+
+```
+
+```{r Libraries, echo=TRUE, warning=FALSE}
+
+# Loading libraires used
+
+library(tidyverse) # Loads R packages for data manipulation and visualization
+library(ggplot2) # Used to create graphs/charts
+library(janitor) # Used to help clean data 
+library(wesanderson) # Color palettes from Wes Anderson movies 
+library(extrafont) # Loaded in more fonts 
+library(gridExtra) # Create a 2x2 grid for plots
+library(grid) # Used to change font for gridExtra
+library(cowplot) # Clean
+
+```
+
+
+```{r include=FALSE}
+
+font_import() # import in more font options
+loadfonts() # load all font options 
+
+```
+
+```{r CSV_Files, echo=TRUE}
+
+# Loading in data that will be used
+
+cooked_food <- read.csv('Sun Haven Cooked Food.csv') # All cooked meals in Sun Haven game
+
+animal_product <- read.csv('Sun Haven Farm Animal.csv') # Ranch animals
+
+fish <- read.csv("Sun Haven Fish.csv") # All fish in game
+
+foragables <- read.csv('Sun Haven Foragables.csv') # All foragables in game
+
+crops <- read.csv('Sun Haven Crops.csv')  # All crops in game
+
+```
+
+```{r Clean_files, include=FALSE}
+
+# change "." and spaces in column names to _
+
+cooked_food <- cooked_food %>% 
+  clean_names()
+
+foragables <- foragables %>% 
+  clean_names()
+
+animal_product <- animal_product %>%
+  clean_names()
+
+crops <- crops %>% 
+  clean_names()
+
+fish <- fish %>% 
+  clean_names()
+
+```
+
+```{r echo=TRUE, eval=TRUE}
+
+
+cooked_food <- cooked_food %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), ~ na_if(., "N/A") %>%
+                  na_if("N A") %>%
+                  na_if(""))) %>% 
+  mutate(sell_price = as.numeric(sell_price),
+         mp = as.numeric(mp),
+         hp = as.numeric(hp)) %>%  
+  mutate(across(where(is.character), ~ gsub("amount", "", .)))  # Remove "amount"
+
+```
+ 
+```{r include=FALSE}
+
+# Clean up csv files
+
+foragables <- foragables %>%
+  mutate(across(everything(), as.character)) %>% # Empty strings replaced with NA values,
+  mutate(across(where(is.character), ~ na_if(., "N/A") %>% # Any values matching "N/A" or "N A" are replaced with NA
+                  na_if("N A") %>% 
+                  na_if("."))) %>% 
+  mutate(sell_price = as.numeric(sell_price), # Sell_price, mp, and hp converted from character to numeric. Non-numeric values = NA
+         mp = as.numeric(mp),
+         hp = as.numeric(hp))
+  
+animal_product <- animal_product %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(where(is.character), ~ na_if(., "N/A") %>%
+                  na_if("N A") %>% 
+                  na_if("."))) %>% 
+  mutate(sell_price = as.numeric(sell_price),
+         mp = as.numeric(mp),
+         hp = as.numeric(hp))
+
+crops <- crops %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(where(is.character), ~ na_if(., "N/A") %>%
+                na_if("N A") %>%
+                na_if("."))) %>% 
+  mutate(sell_price = str_trim(sell_price)) %>%
+  mutate(sell_price = as.numeric(sell_price),
+         seed_price = as.numeric(seed_price),
+         growth_time = as.numeric(growth_time),
+         yield = as.numeric(yield),
+         max_harvest = as.numeric(max_harvest),
+         profit_per_day = as.numeric(profit_per_day))
+
+fish <- fish %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(where(is.character), ~ na_if(., "N/A") %>%
+           na_if("N A") %>% 
+           na_if("."))) %>% 
+  mutate(sell_price = as.numeric(sell_price),
+         mp = as.numeric(mp),
+         hp = as.numeric(hp))
+
+
+```
+
+# Data Collection
+
+I collected my own data for this project, making data clean up an important part of this project. Information was complied from two wikis
+
+https://sun-haven.fandom.com/wiki/Sun_Haven_Wiki
+https://sunhaven.wiki.gg/wiki/Sun_Haven_Wiki
+
+as well as my own save file
+
+The game is still fairly new, with updates still being pushed. Numeric columns in the cleaned data were updated in micropatches but wikis had not been.
+
+While using "csv_" is the best choice, I had first created it with "csv.". By doing so, the code to clean up is a bit more bloated than necessary. Different versions of "NA" has been appropiateky replaced for future codes to be handeled correctly. Not all files were used in the end, however, they were still kept in to show the amount of consideration that I had to put in collecting and scraping the data.
+
+
+```{r Spring_Crops_in_Sun_Haven, include=FALSE}
+
+# Filtered plot sell prices and seed prices for Spring crops in Sun Haven, with lines and points for both prices
+
+pal <- wes_palette("FantasticFox1", 5, type = "discrete")
+
+sun_haven_crops <- crops %>% 
+  filter(town == "Sun Haven", season == "Spring") %>% 
+  filter(!is.na(sell_price))
+
+max_price <-  max(crops$sell_price, na.rm = TRUE)
+
+sun_haven_spring <- ggplot(sun_haven_crops, aes(x = name)) + 
+  geom_line(aes(y = sell_price,
+                group = 1, 
+                color = "Sell Price"), 
+            size = 1) +
+  geom_point(aes(y = sell_price, 
+                 color = "Sell Price")) +
+  geom_line(aes(y = seed_price,group = 1, 
+                color = "Seed Price"), 
+                linetype = "dashed", size = 1) +
+   geom_point(aes(y = seed_price,
+                  color = "Seed Price")) +
+  coord_flip() +
+  scale_y_continuous(breaks = seq(from = 0,
+                                  to = max_price,
+                                  by = 80)) +
+  scale_x_discrete(expand = expansion(add = c(1,1))) + # Adds space on both sides of the x-axis labels. Discrete because it's a str)
+   scale_color_manual(values = c("Sell Price" = pal[1], 
+                                "Seed Price" = pal[2])) + 
+  labs(
+    title = "Sun Haven (Spring)",
+    subtitle = "Currency: Gold",
+    x = "Crop Name",
+    y = NULL) +
+   theme(axis.title.x = element_text(margin = margin(t = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move x-axis label downward
+    axis.title.y = element_text(margin = margin(r = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),
+    plot.title = element_text(
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16), # Adjust title size
+    plot.subtitle = element_text(family = "Courier New"),
+    legend.position = "none")
+  
+print(sun_haven_spring)
+
+```
