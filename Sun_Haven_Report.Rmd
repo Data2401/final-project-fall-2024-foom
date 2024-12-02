@@ -2,9 +2,9 @@
 title: 'Sun Haven: More Mana'
 author: "Phung Tran"
 date: "`r Sys.Date()`"
-output: word_document
-
-  
+output:
+  word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -32,7 +32,6 @@ install.packages("wesanderson", repos = "https://cloud.r-project.org/") # wes an
 install.packages("extrafont", repos = "https://cloud.r-project.org/") # more fonts to choose from 
 install.packages("gridExtra", repos = "https://cloud.r-project.org/") # Used to make 2x2 graphs because plotly is being used 
 install.packages("cowplot", repos = "https://cloud.r-project.org/") # Used to extract legend from a plot and place on 2x2 grid 
-install.packages("kableExtra", repos = "https://cloud.r-project.org/") # Create better kable (HTML) tables
 
 # had to use repos = , in order to knit docuemnt. 
 
@@ -50,8 +49,6 @@ library(extrafont) # Loaded in more fonts
 library(gridExtra) # Create a 2x2 grid for plots
 library(grid) # Used to change font for gridExtra
 library(cowplot) # Clean
-library(knitr) # For kable, cleaner tables 
-library(kableExtra)
 
 ```
 
@@ -96,10 +93,6 @@ crops <- crops %>%
 
 fish <- fish %>% 
   clean_names()
-
-
-crops <- crops %>% select(-c(x, x_1, x_2)) # Deleted extra columns in csv file
-
 
 ```
 
@@ -216,19 +209,19 @@ sun_haven_spring <- ggplot(sun_haven_crops, aes(x = name)) +
     y = NULL) +
    theme(axis.title.x = element_text(margin = margin(t = 10), 
                                 family = "Courier New", 
-                                face = "bold"), 
+                                face = "bold"), # Move x-axis label downward
     axis.title.y = element_text(margin = margin(r = 10), 
                                 family = "Courier New", 
-                                face = "bold"), 
-    axis.text.x = element_text(family = "Courier New"),
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
     axis.text.y = element_text(family = "Courier New"),
     plot.title = element_text(
-      vjust = 1,   
-      family = "Courier New",
-      face = "bold", 
-      size = 16),
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16), # Adjust title size
     plot.subtitle = element_text(family = "Courier New"),
-    legend.position = "bottom")
+    legend.position = "none")
   
 print(sun_haven_spring)
 
@@ -246,6 +239,7 @@ cheapest_crops_sun_haven <- crops %>%
   arrange(sell_price) %>%       # Sort by sell price in ascending order
   slice(1:3)                    # Select the top 3 rows
 
+print(cheapest_crops_sun_haven)
 ```
 
 ```{r Any_Season_Crops_in_Sun_Haven, echo=FALSE, warning=FALSE}
@@ -280,27 +274,26 @@ sun_haven_any <- ggplot(sun_haven_crops_any, aes(x = name)) +
                   color = "Seed Price")) +
   coord_flip() +
   scale_y_continuous(breaks = seq(from = 0, to = max_price, by = 40)) +
-  scale_x_discrete(expand = expansion(add = c(1,1))) + 
+  scale_x_discrete(expand = expansion(add = c(1,1))) + # Adds space on both sides of the x-axis labels. Discrete because it's a str)
   scale_color_manual(values = c("Sell Price" = pal[1], 
                                 "Seed Price" = pal[2])) + 
   labs(
     title = "Sun Haven (Any)",
     subtitle = "Currency: Gold",
-    x = "Crop Name",
-    y = "Sell Price vs Seed Price") +
+    x = NULL, # Removes label on axis
+    y = NULL) +
   theme(axis.title.y = element_blank(),
         axis.title.x = element_blank(),
-        axis.text.x = element_text(family = "Courier New"), 
-        axis.text.y = element_text(family = "Courier New"), 
+        axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+        axis.text.y = element_text(family = "Courier New"),  # Set font for y-axis
     plot.title = element_text(
-      vjust = 1,  
-      family = "Courier New",
-      face = "bold",    
-      size = 16),
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16), # Adjust title size
       plot.subtitle = element_text(family = "Courier New"),
-    legend.position = "bottom",
-    legend.title = element_text(family = "Courier New", face = "bold", size = 10),  
-    legend.text = element_text(family = "Courier New", size = 8)) 
+    legend.title = element_text(family = "Courier New", face = "bold", size = 10),  # Change legend title font
+    legend.text = element_text(family = "Courier New", size = 8))  # Change legend text font
   
 
 print(sun_haven_any)
@@ -310,7 +303,7 @@ print(sun_haven_any)
 
 For spring/any seaosn during first time gameplay, the top 3 cheapest crops are going to be Chocoberry (45 Gold) , Green Beans (200 Gold) , and Kiwi Berry (250 Gold).
 
-```{r Any_Season_Crops_in_Withergate, echo=FALSE, warning=FALSE}
+```{r Any_Season_Crops_in_Withergate, warning=FALSE, include=FALSE}
 
 # Filtered plot sell prices and seed prices for crops grown in "Any" season in Withergate, with lines and points for both prices
 
@@ -338,10 +331,9 @@ withergate_any <- ggplot(withergate_crops, aes(x = name)) +
    geom_point(aes(y = seed_price, color = "Seed Price")) +
   coord_flip() +
   scale_y_continuous(breaks = seq(from = 0, to = max_price, by = 10)) +
-  scale_x_discrete(expand = expansion(add = c(1,1))) + 
+  scale_x_discrete(expand = expansion(add = c(1,1))) + # Adds space on both sides of the x-axis labels. Discrete because it's a str)
   scale_color_manual(values = c("Sell Price" = pal[1], 
                                 "Seed Price" = pal[2])) + 
-  theme(legend.position = "bottom") +
   labs(
     title = "Withergate",
     subtitle = "Currency: Tickets",
@@ -349,17 +341,18 @@ withergate_any <- ggplot(withergate_crops, aes(x = name)) +
     y = "Sell Price vs Seed Price") +
   theme(axis.title.x = element_text(margin = margin(t = 10), 
                                 family = "Courier New", 
-                                face = "bold"),
+                                face = "bold"), # Move x-axis label downward
     axis.title.y = element_text(margin = margin(r = 10), 
                                 family = "Courier New", 
-                                face = "bold"),
-    axis.text.x = element_text(family = "Courier New"), 
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
     axis.text.y = element_text(family = "Courier New"),
+    legend.position = "none",
     plot.title = element_text(
-      vjust = 1,   
-      family = "Courier New", 
-      face = "bold",    
-      size = 16),
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16), # Adjust title size)  
       plot.subtitle = element_text(family = "Courier New"))
  
 print(withergate_any)
@@ -388,27 +381,59 @@ NelVari_any <- ggplot(NelVari_crops, aes(x = name)) +
   geom_point(aes(y = sell_price, color = "Sell Price")) +
   geom_line(aes(y = seed_price, color = "Seed Price", group = 1), linetype = "dashed", size = 1) +
   geom_point(aes(y = seed_price, color = "Seed Price")) +
-  coord_flip() +  
+  coord_flip() +  # Flip coordinates
   scale_y_continuous(breaks = seq(from = 0, to = max_price, by = 10)) +
-  scale_x_discrete(expand = expansion(add = c(1,1))) +  
+  scale_x_discrete(expand = expansion(add = c(1,1))) +  # Adds space on both sides of the x-axis labels
   scale_color_manual(values = c("Sell Price" = pal[1], "Seed Price" = pal[2])) + 
   labs(
     title = "NelVari",
     subtitle = "Currency: Doubloons",
-    x = "Crop Name",   
+    x = NULL,   # Gets rid of label on x axis
     y = "Sell Price vs Seed Price"
   ) +
   theme(
-    axis.title.x = element_text(margin = margin(r = 10), family = "Courier New", face = "bold"), 
-    axis.text.x = element_text(family = "Courier New"), 
-    axis.text.y = element_text(family = "Courier New"), 
-    plot.title = element_text(vjust = 1, family = "Courier New", face = "bold", size = 16), 
+    axis.title.x = element_text(margin = margin(r = 10), family = "Courier New", face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"), # Set font for y-axis
+    plot.title = element_text(vjust = 1, family = "Courier New", face = "bold", size = 16), # Adjust title size
     plot.subtitle = element_text(family = "Courier New"),
     legend.title = element_text(family = "Courier New", face = "bold", size = 10),
     legend.text = element_text(family = "Courier New", size = 8),
-    legend.position = "bottom")
+    legend.position = "bottom"  # Position legend at the bottom
+  )
 
+# Print the plot
 print(NelVari_any)
+
+```
+
+```{r Plots_for_crops, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+# Create the grid layout for the plots without overlapping
+
+# Extract the legend from the modified plot (set to 'bottom')
+shared_legend <- get_legend(NelVari_any)
+
+# Remove the legend from individual plots
+NelVari_any <- NelVari_any + theme(legend.position = "none")
+sun_haven_any <- sun_haven_any + theme(legend.position = "none")
+
+  
+grid.arrange(
+  # Arrange the plots in a 2x2 grid
+  arrangeGrob(
+    sun_haven_spring,     # Plot 1
+    sun_haven_any,        # Plot 2
+    withergate_any,       # Plot 3
+    NelVari_any,          # Plot 4
+    ncol = 2,             # 2 columns
+    nrow = 2              # 2 rows
+  ),
+  # Add the shared legend at the bottom
+  shared_legend,
+  ncol = 1,  # Arrange the grid and legend vertically
+  heights = c(4, 0.5))  # Adjust relative height of the grid 
 
 ```
 
@@ -423,27 +448,11 @@ most_expensive_crops_sun_haven <- crops %>%
          !is.na(sell_price)) %>%
   distinct(name, .keep_all = TRUE) %>% # Keep only unique crop names (some crops grow into 2 seaons)
   arrange(desc(sell_price)) %>% 
-  slice(1:3)    
+  slice(1:3)                   
 
-cheapest_crops_sun_haven %>%
-  select(
-    Name = name, 
-    `Sell Price` = sell_price, 
-    Season = season, 
-    Town = town
-  ) %>%
-  kbl(
-    caption = "Top 3 Cheapest Crops in Sun Haven (Excluding Flowers and Trees)", 
-    format = "pandoc", # Use pandoc for Word compatibility
-    align = "c" # Center-align the columns
-  ) %>%
-  kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed"), # Add table styles
-    full_width = FALSE
-  )
+print(most_expensive_crops_sun_haven)
 
 ```
-
 Notice the currency for the two other towns are different from the starter town. Later on, we will be using this information to filter down the cooked food items we want to focus on. 
 
 ---
@@ -488,17 +497,17 @@ cooked_food_stations <- cooked_food %>%
     legend.position = "none",
     axis.title.x = element_text(margin = margin(t = 10), 
                                 family = "Courier New", 
-                                face = "bold"), 
+                                face = "bold"), # Move x-axis label downward
     axis.title.y = element_text(margin = margin(r = 10), 
                                 family = "Courier New", 
-                                face = "bold"),
-    axis.text.x = element_text(family = "Courier New"), 
-    axis.text.y = element_text(family = "Courier New"), 
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),  # Set font for y-axis
     plot.title = element_text(
-      vjust = 1,   
-      family = "Courier New", 
-      face = "bold",    
-      size = 16))
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16)) # Adjust title size)  
 
 print(cooked_food_stations)
 
@@ -522,7 +531,7 @@ combined_pal <- c(pal1, pal2)
 cooked_food_stats_mana <- cooked_food %>% 
   filter( stat == "Mana") %>% 
   group_by(station) %>%
-  summarize(count = n()) %>%
+  summarize(count = n()) %>%  # Count the number of cooked foods per station
   ggplot(aes(x = station, 
              y = count, 
              fill = station)) +
@@ -533,21 +542,20 @@ cooked_food_stats_mana <- cooked_food %>%
     x = "Station",
     y = "Count of Foods") +
     theme(
+    legend.position = "none",
     axis.title.x = element_text(margin = margin(t = 10), 
                                 family = "Courier New", 
-                                face = "bold"),
+                                face = "bold"), # Move x-axis label downward
     axis.title.y = element_text(margin = margin(r = 10), 
                                 family = "Courier New", 
-                                face = "bold"),
-    axis.text.x = element_text(family = "Courier New",
-                               angle = 45,
-                               hjust = 1),
-    axis.text.y = element_text(family = "Courier New"),
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),  # Set font for y-axis
     plot.title = element_text(
-      vjust = 1,  
-      family = "Courier New",
-      face = "bold",    
-      size = 16))
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16)) # Adjust title size) 
 
 print(cooked_food_stats_mana)
 
@@ -578,17 +586,17 @@ cooked_food_stats_mana_amount <- cooked_food %>%
     legend.position = "none",
     axis.title.x = element_text(margin = margin(t = 10), 
                                 family = "Courier New", 
-                                face = "bold"), 
+                                face = "bold"), # Move x-axis label downward
     axis.title.y = element_text(margin = margin(r = 10), 
                                 family = "Courier New", 
-                                face = "bold"), 
-    axis.text.x = element_text(family = "Courier New"), 
-    axis.text.y = element_text(family = "Courier New"),  
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),  # Set font for y-axis
     plot.title = element_text(
-      vjust = 1,   
-      family = "Courier New", 
-      face = "bold",    
-      size = 16)) 
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16)) # Adjust title size) 
 
 
 print(cooked_food_stats_mana_amount)
@@ -608,20 +616,8 @@ huge_mana <- cooked_food %>%
   arrange(desc(mp)) %>% 
   select(station, item,currency, stat, stat_boost, ingredient_1, ingredient_2, ingredient_3)
 
-huge_mana %>%
-  select(
-    Station = station,
-    Recipe = item,
-    Currency = currency,
-    Ingredient_1 = ingredient_1,
-    Ingredient_2 = ingredient_2,
-    Ingredient_3 = ingredient_3) %>%
-  kbl(
-    caption = "Cooking Pot Recipes with Huge Mana Boost",
-    format = "pandoc") %>%
-  kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed"), 
-    full_width = FALSE)
+
+tibble(huge_mana)
 
 ```
 
@@ -656,21 +652,7 @@ top_10_foods_sun_haven <- filtered_foods_sun_haven %>%
   select(station, item,currency, stat_boost, ingredient_1, ingredient_2, ingredient_3) %>%
   head(10)  # Select the top 10
 
-top_10_foods_sun_haven %>%
-  select(
-    Station = station,
-    Recipe = item,
-    Currency = currency,
-    Boost = stat_boost,
-    Ingredient_1 = ingredient_1,
-    Ingredient_2 = ingredient_2,
-    Ingredient_3 = ingredient_3) %>%
-  kbl(
-    caption = "Top 10 Mana Boosting Foods in Sun Haven (Gold Currency)",
-    format = "pandoc") %>%
-  kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed"), 
-    full_width = FALSE)
+tibble(top_10_foods_sun_haven)
 
 ```
 
@@ -679,5 +661,6 @@ For new players starting in Sun Haven, filtering recipes by the Sun Haven (start
 As players get pass their first year, a more generalized search of recipes can help them optimize resource management. By considering all available recipes, players can find the data useful towards long term goals and make better decisions in how they would like to use their time and resources.
 
 In both scenarios, players can use the information to better organize their farm and storage layouts. This strategic planning allows for a more efficient gameplay, allowing players to use their increased permanent mana to cast spells to maximize their crops to recipe yield, as well as profits and usage of attack spells to get through the fighting aspects of the game.
+
 
 
