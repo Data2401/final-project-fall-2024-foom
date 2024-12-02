@@ -1,0 +1,461 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Sun Haven: More Mana},
+  pdfauthor={Phung Tran},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Sun Haven: More Mana}
+\author{Phung Tran}
+\date{2024-12-02}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}\label{introduction}
+
+Sun Haven is a farming rpg similar to more popular titles such as
+Stardew Valley and Harvest Moon. Players must balance there time between
+farming, crafting, and exploration to improve their farm and player
+stats. By permanently boosting your stats, such as mana, players can
+optimize there gameplay.
+
+To permanently boost your mana stat, there are many events or random
+objects that the player can find. However, the most mainline way to do
+this would be to eat. Whether it be foragables or cooked foods, eating
+is the most basic way to raise mana, making it important to manage your
+resources. Specifically because having more mana let's you cast spells
+that make farming/combat and traveling more efficient.
+
+Whether its after the first year of game play or beginning of the game,
+having this information will save resources for making more storage
+containers and saves space in your home. Just like other games in this
+genre, you need supplies and space to create the storage. While the game
+might give you three homes/farms to travel through, those same resources
+can be used for other crafts such as weapons/armor and furnace
+materials.
+
+It can be hard to keep track of what foods are the most ideal to
+constantly stack up on. This also means you have to mine more ore and
+wood, with wood specifically needing more time to regrow. By looking
+through the charts presented, we can get useful knowledge about how to
+proceed with resource management to increase mana to optimize game play
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Loading libraires used}
+
+\FunctionTok{library}\NormalTok{(tidyverse) }\CommentTok{\# Loads R packages for data manipulation and visualization}
+\FunctionTok{library}\NormalTok{(ggplot2) }\CommentTok{\# Used to create graphs/charts}
+\FunctionTok{library}\NormalTok{(janitor) }\CommentTok{\# Used to help clean data }
+\FunctionTok{library}\NormalTok{(wesanderson) }\CommentTok{\# Color palettes from Wes Anderson movies }
+\FunctionTok{library}\NormalTok{(extrafont) }\CommentTok{\# Loaded in more fonts }
+\FunctionTok{library}\NormalTok{(gridExtra) }\CommentTok{\# Create a 2x2 grid for plots}
+\FunctionTok{library}\NormalTok{(grid) }\CommentTok{\# Used to change font for gridExtra}
+\FunctionTok{library}\NormalTok{(cowplot) }\CommentTok{\# Clean}
+\FunctionTok{library}\NormalTok{(knitr) }\CommentTok{\# For kable, cleaner tables }
+\FunctionTok{library}\NormalTok{(kableExtra)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Loading in data that will be used}
+
+\NormalTok{cooked\_food }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{\textquotesingle{}Sun Haven Cooked Food.csv\textquotesingle{}}\NormalTok{) }\CommentTok{\# All cooked meals in Sun Haven game}
+
+\NormalTok{animal\_product }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{\textquotesingle{}Sun Haven Farm Animal.csv\textquotesingle{}}\NormalTok{) }\CommentTok{\# Ranch animals}
+
+\NormalTok{fish }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"Sun Haven Fish.csv"}\NormalTok{) }\CommentTok{\# All fish in game}
+
+\NormalTok{foragables }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{\textquotesingle{}Sun Haven Foragables.csv\textquotesingle{}}\NormalTok{) }\CommentTok{\# All foragables in game}
+
+\NormalTok{crops }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{\textquotesingle{}Sun Haven Crops.csv\textquotesingle{}}\NormalTok{)  }\CommentTok{\# All crops in game}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Data Collection}\label{data-collection}
+
+I collected my own data for this project, making data clean up an
+important part of this project. Information was complied from two wikis
+
+\url{https://sun-haven.fandom.com/wiki/Sun_Haven_Wiki}
+\url{https://sunhaven.wiki.gg/wiki/Sun_Haven_Wiki}
+
+as well as my own save file
+
+The game is still fairly new, with updates still being pushed. Numeric
+columns in the cleaned data were updated in micropatches but wikis had
+not been.
+
+While using ``csv\_'' is the best choice, I had first created it with
+``csv.''. By doing so, the code to clean up is a bit more bloated than
+necessary. Different versions of ``NA'' has been appropiateky replaced
+for future codes to be handeled correctly. Not all files were used in
+the end, however, they were still kept in to show the amount of
+consideration that I had to put in collecting and scraping the data.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Data Analysis}\label{data-analysis}
+
+By looking at crops grown in the starting town, Sun Haven, that can only
+be grown in the Spring and any season, for first play through of the
+game, players can figure out which crops will be more cost efficient.
+Items that were categorized as trees and flowers were filtered out. The
+reason being, flowers are not used in any recipes and fruits from trees
+can be found everywhere for free around town while crops have tp be
+grown by the player. While this plot can be used to find crops to grow
+to maximize profits, we want to looks at the cheapest seeds we can buy
+as a new player, and then, crops that would be best to grow after first
+year gameplay.
+
+\includegraphics{Sun_Haven_Report_files/figure-latex/Spring_Crops_in_Sun_Haven-1.pdf}
+
+\includegraphics{Sun_Haven_Report_files/figure-latex/Any_Season_Crops_in_Sun_Haven-1.pdf}
+
+For spring/any seaosn during first time gameplay, the top 3 cheapest
+crops are going to be Chocoberry (45 Gold) , Green Beans (200 Gold) ,
+and Kiwi Berry (250 Gold).
+
+\includegraphics{Sun_Haven_Report_files/figure-latex/Any_Season_Crops_in_Withergate-1.pdf}
+
+\includegraphics{Sun_Haven_Report_files/figure-latex/Any_Season_Crops_in_NelVari-1.pdf}
+
+After first year gameplay, players can choose crops from all the towns
+in the game, which includes Withergate and Nel'Vari, as well as consider
+some of the pricier crops available to them from Sun Haven alone shown
+in the table below.
+
+\begin{table}
+\centering
+\caption{\label{tab:top_3_expensive_crops}Top 3 Cheapest Crops in Sun Haven (Excluding Flowers and Trees)}
+\centering
+\begin{tabular}[t]{c|>{}c|c|c}
+\hline
+\cellcolor[HTML]{D3D3D3}{\textbf{Name}} & \cellcolor[HTML]{D3D3D3}{\textbf{Sell Price}} & \cellcolor[HTML]{D3D3D3}{\textbf{Season}} & \cellcolor[HTML]{D3D3D3}{\textbf{Town}}\\
+\hline
+Clover & \textcolor{blue}{\textbf{5}} & Any & Sun Haven\\
+\hline
+Chocoberry & \textcolor{blue}{\textbf{12}} & Spring & Sun Haven\\
+\hline
+Green Beans & \textcolor{blue}{\textbf{20}} & Spring & Sun Haven\\
+\hline
+\end{tabular}
+\end{table}
+
+Notice the currency for the two other towns are different from the
+starter town. Later on, we will be using this information to filter down
+the cooked food items we want to focus on.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Next, we can look at all the stations that is used to cook food.
+
+\includegraphics{Sun_Haven_Report_files/figure-latex/Station_Recipes_in_each_one-1.pdf}
+
+From Sushi table to cooking pot is all the stations available to you in
+the starting town. You can tell that one of the starting station,
+cooking pot, has the most cooked food that are available to players at
+the beginning of the game.
+
+\includegraphics{Sun_Haven_Report_files/figure-latex/Cooked_Food_Mana_Stat_Boost-1.pdf}
+
+By narrowing it down to only looking at recipes that permanently boost
+players mana, it can be seen that the cooking pot still has the most
+options available to players. Meaning that whether or not players are
+doing their first gameplay, growing crops from Sun Haven is going to be
+beneficial in boosting the mana.stat permanently.
+
+\includegraphics{Sun_Haven_Report_files/figure-latex/Amount_of_Mana-1.pdf}
+
+The Cooking Pot has a clear bias towards small stat boosts, which could
+indicate that it is designed to provide incremental boosts to players
+for first year playthrough. However, there is a noticeable amount of
+recipes that offer huge permanent stat boosts, which is geared towards
+after first year playthrough.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1081}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2523}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0811}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1802}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1622}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2162}}@{}}
+\caption{Cooking Pot Recipes with Huge Mana Boost}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Station
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Recipe
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Currency
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_3
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Station
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Recipe
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Currency
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_3
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Cooking Pot & Golden Spicy Noodles & Mana Orb & Golden Fire Rune &
+Noodles & Greenspice \\
+Cooking Pot & Golden Fathom Fruit Stirfry & Mana Orb & Golden Fathom
+Fruit & Mushroom & Seaweed \\
+Cooking Pot & Golden Mushroom Burger & Mana Orb & Golden Mushroom &
+Bread & Tomato \\
+Cooking Pot & Golden Brinestone Feast & Mana Orb & Golden Brine Berry &
+Golden Trench Nut & Golden Nautitrine Fruit \\
+\end{longtable}
+
+These ``huge'' mana stat boost items contain ``Golden'' in the name as
+well as ingredients listed that are not possible to obtain early on.
+With the currency being ``Mana Orb'', the town Nel'Vari would have to be
+available to the player. It can be implied, when ``Golden'' is excluded
+from the search, it becomes clear that there are no beginner-friendly
+recipes for huge mana stat boosts in the Cooking Pot at the start of the
+game.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+By filtering the search down further, to include only crops from Spring
+or Any season players can look at more early game accessible items that
+are easier to obtain. This will help significantly with boosting mana
+stat efficiently early on so players do not overstock on multiple items
+and clutter their farm layout.
+
+The filtered data set shows the top 10 recipes for mana boosts that
+include Spring crops as ingredients. It has also been filtered down by
+removing any crop whose currency is anything other ``Gold'', as it's
+going to be the first currency available for players to use for awhile.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1304}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2283}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0978}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1196}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1413}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1413}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1413}}@{}}
+\caption{Top 10 Mana Boosting Foods in Sun Haven (Gold
+Currency)}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Station
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Recipe
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Currency
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Boost
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_3
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Station
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Recipe
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Currency
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Boost
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ingredient\_3
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Cooking Pot & Blueberry Salad & Gold & small & Blueberry & Lettuce &
+NA \\
+Cooking Pot & Pickled Veggie Salad & Gold & small & Lettuce & Tomato &
+Greenspice \\
+Cooking Pot & Sesame Rice Ball & Gold & small & Rice & Seaweed & NA \\
+Cooking Pot & Mochi & Gold & small & Rice & Sugar & NA \\
+Cooking Pot & Lasagna & Gold & moderate & Noodles & Tomato & Cheese \\
+Cooking Pot & Apple Sauce & Gold & small & Apple & Sugar & Cinnaberry \\
+Cooking Pot & Cinnamon Apple Pie & Gold & small & Cinnaberry & Apple &
+Sugar \\
+Cooking Pot & BLT & Gold & small & Bread & Lettuce & Tomato \\
+Cooking Pot & Poke Bowl & Gold & small & Salmon & Tuna & Rice \\
+Cooking Pot & Churros & Gold & very small & Cinnaberry & Flour &
+Sugar \\
+\end{longtable}
+
+For new players starting in Sun Haven, filtering recipes by the Sun
+Haven (starting town) and Spring season gives players insight into what
+is accessible to them to permanently increase their mana stat. With a
+more filtered and focused data, this helps players manage resources
+better and help stat progression, while also optimizing their gameplay
+
+As players get pass their first year, a more generalized search of
+recipes can help them optimize resource management. By considering all
+available recipes, players can find the data useful towards long term
+goals and make better decisions in how they would like to use their time
+and resources.
+
+In both scenarios, players can use the information to better organize
+their farm and storage layouts. This strategic planning allows for a
+more efficient gameplay, allowing players to use their increased
+permanent mana to cast spells to maximize their crops to recipe yield,
+as well as profits and usage of attack spells to get through the
+fighting aspects of the game.
+
+\end{document}
