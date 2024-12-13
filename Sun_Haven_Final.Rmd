@@ -1,0 +1,665 @@
+---
+title: "Sun Haven: More Mana"
+author: '"Phung (foom) Tran"'
+output: 
+  slidy_presentation: 
+    css: custom.css
+    geometry: margin=1in   # Page margins
+  
+---
+# Introduction
+
+```
+Sun Haven is a farming rpg similar to more popular titles such as Stardew Valley and Harvest Moon. Players must balance there time between farming, crafting, and exploration to improve their farm and player stats. By permanently boosting your stats, such as mana, players can optimize there gameplay. 
+
+```
+```{r Intro for Final Paper, eval=FALSE, include=FALSE}
+# To permanently boost your mana stat, there are many events or random objects that the player can find. However, the most mainline way to do this would be to eat. Whether it be foragables or cooked foods, eating is the most basic way to raise mana, making it important to manage your resources. Specifically because having more mana let's you cast spells that make farming/combat and traveling more efficient.
+# 
+# Whether its after the first year of game play or beginning of the game, having this information will save resources for making more storage containers and saves space in your home. Just like other games in this genre, you need supplies and space to create the storage. While the game might give you three homes/farms to travel through, those same resources can be used for other crafts such as weapons/armor and furnace materials. 
+# 
+# It can be hard to keep track of what foods are the most ideal to constantly stack up on. This also means you have to mine more ore and wood, with wood specifically needing more time to regrow. By looking through the charts presented, we can get useful knowledge about how to proceed with resource management to increase mana to optimize game play
+```
+
+# Questions I wanted to ask
+
+  1. What are some crops or cooked foods that we can focus on in Spring and starting town? 
+  2. After first year gameplay,  what can players focus on in Spring to see what can be   prepared to boost our mana?
+  3. What cooked foods give us the biggest amounts of mana? 
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
+
+```
+
+```{r Installed_Packages, message=FALSE, warning=FALSE, include=FALSE}
+
+install.packages("janitor", repos = "https://cloud.r-project.org/") # Used to clean up cvs files
+install.packages("wesanderson", repos = "https://cloud.r-project.org/") # wes anderson color palettes
+install.packages("extrafont", repos = "https://cloud.r-project.org/") # more fonts to choose from 
+install.packages("gridExtra", repos = "https://cloud.r-project.org/") # Used to make 2x2 graphs because plotly is being used 
+install.packages("cowplot", repos = "https://cloud.r-project.org/") # Used to extract legend from a plot and place on 2x2 grid 
+
+# had to use repos = , in order to knit docuemnt. 
+
+```
+
+---
+
+```{r Libraries, echo=TRUE, warning=FALSE}
+
+# Loading libraires used
+
+library(tidyverse) # Loads R packages fro data manipulation and visualization
+library(ggplot2) # Used to create graphs/charts
+library(janitor) # Used to help clean data 
+library(wesanderson) # Color palettes from Wes Anderson movies 
+library(extrafont) # Loaded in more fonts 
+library(gridExtra) # Create a 2x2 grid for plots
+library(grid) # Used to change font for gridExtra
+library(cowplot) # Clean
+
+```
+
+```{r include=FALSE}
+
+font_import() # import in more font options
+loadfonts() # load all font options 
+
+```
+
+---
+
+```{r CSV_Files, echo=TRUE}
+
+# Loading in data that will be used
+
+cooked_food <- read.csv('Sun Haven Cooked Food.csv') 
+
+animal_product <- read.csv('Sun Haven Farm Animal.csv')
+
+fish <- read.csv("Sun Haven Fish.csv")
+
+foragables <- read.csv('Sun Haven Foragables.csv')
+
+crops <- read.csv('Sun Haven Crops.csv')
+
+```
+
+```{r Clean_files, include=FALSE}
+
+# change "." and spaces in column names to _
+
+cooked_food <- cooked_food %>% 
+  clean_names()
+
+foragables <- foragables %>% 
+  clean_names()
+
+animal_product <- animal_product %>%
+  clean_names()
+
+crops <- crops %>% 
+  clean_names()
+
+fish <- fish %>% 
+  clean_names()
+
+```
+
+--- 
+
+```{r include=FALSE}
+
+# Double checking column names
+
+colnames(cooked_food)
+colnames(crops)
+colnames(foragables)
+colnames(animal_product)
+
+# crops <- crops %>% select(-c(X, X.1, X.2)) # Deleted extra columns in csv file
+
+```
+
+
+```{r echo=TRUE, eval=TRUE}
+
+
+# Convert all columns to character, clean missing values ("", "N/A", "N A"), and process numeric columns
+
+cooked_food <- cooked_food %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), ~ na_if(., ""))) %>% # for string values
+  mutate(sell_price = as.numeric(sell_price), # convert any number columns into numeric
+         mp = as.numeric(mp),
+         hp = as.numeric(hp)) %>%  
+  mutate(across(where(is.character), ~ na_if(., "N/A"))) %>%  # Replace "N/A" with NA
+  mutate(across(where(is.character), ~ na_if(., "N A"))) %>%   # Replace "N A" with NA 
+  mutate(across(where(is.character), ~ gsub("amount", "", .)))  # Remove "amount"
+
+```
+ 
+```{r include=FALSE}
+
+foragables <- foragables %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), ~ na_if(., ""))) %>%
+  mutate(sell_price = as.numeric(sell_price),
+         mp = as.numeric(mp),
+         hp = as.numeric(hp)) %>%
+  mutate(across(where(is.character), ~ na_if(., "N/A"))) %>%
+  mutate(across(where(is.character), ~ na_if(., "N A")))
+
+
+animal_product <- animal_product %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), ~ na_if(., ""))) %>%
+  mutate(sell_price = as.numeric(sell_price),
+         mp = as.numeric(mp),
+         hp = as.numeric(hp)) %>%
+  mutate(across(where(is.character), ~ na_if(., "N/A"))) %>%
+  mutate(across(where(is.character), ~ na_if(., "N A")))
+
+
+crops <- crops %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), ~ na_if(., "N/A"))) %>%
+  mutate(across(everything(), ~ na_if(., "N A"))) %>%
+  mutate(sell_price = str_trim(sell_price)) %>%
+  mutate(sell_price = as.numeric(sell_price),
+         seed_price = as.numeric(seed_price),
+         growth_time = as.numeric(growth_time),
+         yield = as.numeric(yield),
+         max_harvest = as.numeric(max_harvest),
+         profit_per_day = as.numeric(profit_per_day))
+
+
+fish <- fish %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), ~ na_if(., ""))) %>%
+  mutate(across(where(is.numeric), as.numeric)) %>%
+  mutate(sell_price = as.numeric(sell_price),
+         mp = as.numeric(mp),
+         hp = as.numeric(hp)) %>%
+  mutate(across(where(is.character), ~ na_if(., "N/A"))) %>%
+  mutate(across(where(is.character), ~ na_if(., "N A")))
+
+```
+
+```{r Spring_Crops_in_Sun_Haven, include=FALSE}
+
+# Filtered plot sell prices and seed prices for Spring crops in Sun Haven, with lines and points for both prices
+
+pal <- wes_palette("FantasticFox1", 5, type = "discrete")
+
+sun_haven_crops <- crops %>% 
+  filter(town == "Sun Haven", season == "Spring") %>% 
+  filter(!is.na(sell_price))
+
+max_price <-  max(crops$sell_price, na.rm = TRUE)
+
+sun_haven_spring <- ggplot(sun_haven_crops, aes(x = name)) + 
+  geom_line(aes(y = sell_price,
+                group = 1, 
+                color = "Sell Price"), 
+            size = 1) +
+  geom_point(aes(y = sell_price, 
+                 color = "Sell Price")) +
+  geom_line(aes(y = seed_price,group = 1, 
+                color = "Seed Price"), 
+                linetype = "dashed", size = 1) +
+   geom_point(aes(y = seed_price,
+                  color = "Seed Price")) +
+  coord_flip() +
+  scale_y_continuous(breaks = seq(from = 0,
+                                  to = max_price,
+                                  by = 80)) +
+  scale_x_discrete(expand = expansion(add = c(1,1))) + # Adds space on both sides of the x-axis labels. Discrete because it's a str)
+   scale_color_manual(values = c("Sell Price" = pal[1], 
+                                "Seed Price" = pal[2])) + 
+  labs(
+    title = "Sun Haven (Spring)",
+    subtitle = "Currency: Gold",
+    x = "Crop Name",
+    y = NULL) +
+   theme(axis.title.x = element_text(margin = margin(t = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move x-axis label downward
+    axis.title.y = element_text(margin = margin(r = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),
+    plot.title = element_text(
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16), # Adjust title size
+    plot.subtitle = element_text(family = "Courier New"),
+    legend.position = "none")
+  
+print(sun_haven_spring)
+
+```
+
+
+```{r Any_Season_Crops_in_Sun_Haven, include=FALSE}
+
+# Filtered plot sell prices and seed prices for crops grown in "Any" season in Sun Haven, with lines and points for both prices
+
+sun_haven_crops_any <- crops %>% 
+  filter(town == "Sun Haven", 
+         season == "Any", 
+         category != "Flower",
+         category != "Tree")
+
+# Calculate the maximum price for setting y-axis breaks
+
+max_price <- max(sun_haven_crops_any$sell_price, na.rm = TRUE)
+
+# Create the plot for Sun Haven crops (Any season)
+
+pal <- wes_palette("FantasticFox1", 5, type = "discrete")
+
+sun_haven_any <- ggplot(sun_haven_crops_any, aes(x = name)) + 
+  geom_line(aes(y = sell_price,
+                group = 1, 
+                color = "Sell Price"), 
+            size = 1) +
+  geom_point(aes(y = sell_price,
+                 color = "Sell Price")) +
+  geom_line(aes(y = seed_price,group = 1, 
+                color = "Seed Price"), 
+                linetype = "dashed", size = 1) +
+   geom_point(aes(y = seed_price, 
+                  color = "Seed Price")) +
+  coord_flip() +
+  scale_y_continuous(breaks = seq(from = 0, to = max_price, by = 40)) +
+  scale_x_discrete(expand = expansion(add = c(1,1))) + # Adds space on both sides of the x-axis labels. Discrete because it's a str)
+  scale_color_manual(values = c("Sell Price" = pal[1], 
+                                "Seed Price" = pal[2])) + 
+  labs(
+    title = "Sun Haven (Any)",
+    subtitle = "Currency: Gold",
+    x = NULL, # Removes label on axis
+    y = NULL) +
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+        axis.text.y = element_text(family = "Courier New"),  # Set font for y-axis
+    plot.title = element_text(
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16), # Adjust title size
+      plot.subtitle = element_text(family = "Courier New"),
+    legend.title = element_text(family = "Courier New", face = "bold", size = 10),  # Change legend title font
+    legend.text = element_text(family = "Courier New", size = 8))  # Change legend text font
+  
+
+print(sun_haven_any)
+
+```
+
+```{r Any_Season_Crops_in_Withergate, include=FALSE}
+
+# Filtered plot sell prices and seed prices for crops grown in "Any" season in Withergate, with lines and points for both prices
+
+withergate_crops <- crops %>% 
+  filter(town == "Withergate", 
+         season == "Any",
+         category != "Tree")
+
+# Calculate the maximum price for setting y-axis breaks
+
+max_price <- max(withergate_crops$sell_price, na.rm = TRUE)
+
+# Create the plot for Withergate crops
+
+pal <- wes_palette("FantasticFox1", 5, type = "discrete")
+
+withergate_any <- ggplot(withergate_crops, aes(x = name)) + 
+  geom_line(aes(y = sell_price,
+                group = 1,
+                color = "Sell Price"), size = 1) +
+  geom_point(aes(y = sell_price, color = "Sell Price")) +
+  geom_line(aes(y = seed_price,group = 1, 
+                color = "Seed Price"), 
+                linetype = "dashed", size = 1) +
+   geom_point(aes(y = seed_price, color = "Seed Price")) +
+  coord_flip() +
+  scale_y_continuous(breaks = seq(from = 0, to = max_price, by = 10)) +
+  scale_x_discrete(expand = expansion(add = c(1,1))) + # Adds space on both sides of the x-axis labels. Discrete because it's a str)
+  scale_color_manual(values = c("Sell Price" = pal[1], 
+                                "Seed Price" = pal[2])) + 
+  labs(
+    title = "Withergate",
+    subtitle = "Currency: Tickets",
+    x = "Crop Name",
+    y = "Sell Price vs Seed Price") +
+  theme(axis.title.x = element_text(margin = margin(t = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move x-axis label downward
+    axis.title.y = element_text(margin = margin(r = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),
+    legend.position = "none",
+    plot.title = element_text(
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16), # Adjust title size)  
+      plot.subtitle = element_text(family = "Courier New"))
+ 
+print(withergate_any)
+
+```
+
+```{r Any_Season_Crops_in_NelVari, include=FALSE}
+
+# Filtered plot sell prices and seed prices for crops grown in "Any" season in Nel'Vari, with lines and points for both prices
+
+# Filter data for NelVari crops
+NelVari_crops <- crops %>% 
+  filter(town == "NelVari", 
+         season == "Any",
+         category != "Tree")
+
+# Calculate the maximum price for setting y-axis breaks
+max_price <- max(NelVari_crops$sell_price, na.rm = TRUE)
+
+# Define color palette
+pal <- wes_palette("FantasticFox1", 5, type = "discrete")
+
+# Create the plot for NelVari crops
+NelVari_any <- ggplot(NelVari_crops, aes(x = name)) + 
+  geom_line(aes(y = sell_price, color = "Sell Price", group = 1), size = 1) +
+  geom_point(aes(y = sell_price, color = "Sell Price")) +
+  geom_line(aes(y = seed_price, color = "Seed Price", group = 1), linetype = "dashed", size = 1) +
+  geom_point(aes(y = seed_price, color = "Seed Price")) +
+  coord_flip() +  # Flip coordinates
+  scale_y_continuous(breaks = seq(from = 0, to = max_price, by = 10)) +
+  scale_x_discrete(expand = expansion(add = c(1,1))) +  # Adds space on both sides of the x-axis labels
+  scale_color_manual(values = c("Sell Price" = pal[1], "Seed Price" = pal[2])) + 
+  labs(
+    title = "NelVari",
+    subtitle = "Currency: Doubloons",
+    x = NULL,   # Gets rid of label on x axis
+    y = "Sell Price vs Seed Price"
+  ) +
+  theme(
+    axis.title.x = element_text(margin = margin(r = 10), family = "Courier New", face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"), # Set font for y-axis
+    plot.title = element_text(vjust = 1, family = "Courier New", face = "bold", size = 16), # Adjust title size
+    plot.subtitle = element_text(family = "Courier New"),
+    legend.title = element_text(family = "Courier New", face = "bold", size = 10),
+    legend.text = element_text(family = "Courier New", size = 8),
+    legend.position = "bottom"  # Position legend at the bottom
+  )
+
+# Print the plot
+print(NelVari_any)
+
+```
+
+---
+
+```{r Plots_for_crops, echo=FALSE}
+
+
+# Create the grid layout for the plots without overlapping
+
+# Extract the legend from the modified plot (set to 'bottom')
+shared_legend <- get_legend(NelVari_any)
+
+# Remove the legend from individual plots
+NelVari_any <- NelVari_any + theme(legend.position = "none")
+sun_haven_any <- sun_haven_any + theme(legend.position = "none")
+
+  
+grid.arrange(
+  # Arrange the plots in a 2x2 grid
+  arrangeGrob(
+    sun_haven_spring,     # Plot 1
+    sun_haven_any,        # Plot 2
+    withergate_any,       # Plot 3
+    NelVari_any,          # Plot 4
+    ncol = 2,             # 2 columns
+    nrow = 2              # 2 rows
+  ),
+  # Add the shared legend at the bottom
+  shared_legend,
+  ncol = 1,  # Arrange the grid and legend vertically
+  heights = c(4, 0.5))  # Adjust relative height of the grid 
+
+
+```
+
+
+These charts help us narrow down what crops we can grow if we just started the game. Specifically looking at fig.1 and fig.2. Fig. 3 and 4 are more useful when have gone through the first year of game play. While money is not the main thing we're looking for in the data, it is useful information to help decide a starting point.
+
+
+---
+
+
+Next, we can look at all the stations that is used to cook food.
+You can tell that the starting station, cooking pot, has the most recipes that are available to you at the beginning of the game. By looking at this chart, you're starting town, Sun Haven, has more recipes for you to choose from.
+
+
+```{r Station_Recipes_in_each_one, echo=FALSE}
+
+# Define two color palettes
+
+pal1 <- wes_palette("FrenchDispatch", 5, type = "discrete")  # First palette
+pal2 <- wes_palette("FantasticFox1", 5, type = "discrete")  # Second palette
+
+# Combine both palettes
+
+combined_pal <- c(pal1, pal2)
+
+# Create a lollipop chart showing the number of recipes in each cooking station
+
+cooked_food_stations <- cooked_food %>% 
+  group_by(station) %>% 
+  summarise(count = n()) %>% 
+  ggplot(aes(x = reorder(station, count), 
+             y = count)) + 
+           geom_segment(aes(xend = station,
+                            y = 0, 
+                            yend = count), 
+                            color = "orange") +
+           geom_point(aes(color = count),
+                      size = 4, 
+                      show.legend = FALSE) +
+  scale_color_gradientn(colors = combined_pal) +
+  coord_flip() +
+  labs(
+    title = "Cooking Stations: Recipes",
+    x = "Station",
+    y = "Amount of Recipes") +
+   theme(
+    legend.position = "none",
+    axis.title.x = element_text(margin = margin(t = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move x-axis label downward
+    axis.title.y = element_text(margin = margin(r = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),  # Set font for y-axis
+    plot.title = element_text(
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16)) # Adjust title size)  
+
+print(cooked_food_stations)
+
+```
+
+---
+
+```{r Cooked_Food_Mana_Stat_Boost, echo=FALSE}
+
+# Define a discrete color palette (not continuous)
+
+# Define two color palettes
+
+pal1 <- wes_palette("FrenchDispatch", 5, type = "discrete")  # First palette
+pal2 <- wes_palette("FantasticFox1", 5, type = "discrete")  # Second palette
+
+# Combine both palettes
+combined_pal <- c(pal1, pal2)
+
+cooked_food_stats_mana <- cooked_food %>% 
+  filter( stat == "Mana") %>% 
+  group_by(station) %>%
+  summarize(count = n()) %>%  # Count the number of cooked foods per station
+  ggplot(aes(x = station, 
+             y = count, 
+             fill = station)) +
+  geom_col() +
+  scale_fill_manual(values = combined_pal) +
+  labs(
+    title = "Cooked Foods that Boost Mana",
+    x = "Station",
+    y = "Count of Foods") +
+    theme(
+    legend.position = "none",
+    axis.title.x = element_text(margin = margin(t = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move x-axis label downward
+    axis.title.y = element_text(margin = margin(r = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),  # Set font for y-axis
+    plot.title = element_text(
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16)) # Adjust title size) 
+
+print(cooked_food_stats_mana)
+
+```
+
+
+By narrowing it down to only looking at recipes that permanently boost your mana, we can see that the cooking pot still has the most options available to you.
+
+
+---
+
+```{r Amount_of_Mana, echo=FALSE, warning=FALSE}
+
+pal <- wes_palette("FantasticFox1", 5, type = "discrete")  # Second palette
+
+cooked_food_stats_mana_amount <- cooked_food %>% 
+  filter(stat == "Mana", station == "Cooking Pot") %>% 
+  group_by(stat_boost) %>% 
+  summarise(count = n()) %>% 
+  ggplot((aes(x = stat_boost,
+              y = count,
+              fill = stat_boost))) +
+  geom_col() +
+  scale_fill_manual(values = pal) +
+  labs(
+    title = "Amount of Mana Boost in Cooking Pot Recipes",
+    x = "Amount of Mana",
+    y = "Amount of foods") +
+   theme(
+    legend.position = "none",
+    axis.title.x = element_text(margin = margin(t = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move x-axis label downward
+    axis.title.y = element_text(margin = margin(r = 10), 
+                                family = "Courier New", 
+                                face = "bold"), # Move y-axis label to the left
+    axis.text.x = element_text(family = "Courier New"), # Set font for x-axis
+    axis.text.y = element_text(family = "Courier New"),  # Set font for y-axis
+    plot.title = element_text(
+      vjust = 1,   # Move the title upward
+      family = "Courier New", # Change font
+      face = "bold",    # Make the title bold
+      size = 16)) # Adjust title size) 
+
+
+print(cooked_food_stats_mana_amount)
+
+```
+
+From here, we can see the cooking pot has bias towards "small" stat boost available to us. However, we can also see that we do have recipes that give us "huge" permanent stat boost
+
+---
+
+```{r Huge_Stat_Boost_for_Cooking_Pot, echo=FALSE}
+
+huge_mana <- cooked_food %>% 
+  filter(stat == "Mana",
+         station == "Cooking Pot", 
+         stat_boost == "huge") %>% 
+  arrange(desc(mp)) %>% 
+  select(station, item,currency, stat, stat_boost, ingredient_1, ingredient_2, ingredient_3)
+
+
+tibble(huge_mana)
+
+```
+
+
+These "huge" mana stat boost items contain "Golden" in the name as well as ingredients listed that are not possible to obtain early on. With the currency being "Mana Orb", the town Nel'Vari would have to be available to the player.
+
+It can be implied, when "Golden" is excluded from the search, there are no beginner friendly items to be made
+
+
+---
+
+
+By filtering the search down further, there are more early game accessible items.
+
+
+```{r Starting_items, echo=FALSE}
+
+spring_or_any_crops_sun_haven <-  crops %>% 
+  filter((season == "Spring" | 
+          season == "Any") & 
+          currency == "Gold") %>% 
+  pull(name)  # Pull out the crop names
+
+filtered_foods_sun_haven <- cooked_food %>% 
+  mutate(
+    has_spring_crop_sun_haven = ingredient_1 %in% spring_or_any_crops_sun_haven | 
+                      ingredient_2 %in% spring_or_any_crops_sun_haven | 
+                      ingredient_3 %in% spring_or_any_crops_sun_haven) %>% 
+  filter(has_spring_crop_sun_haven & 
+           currency == "Gold" &
+           stat == "Mana")  # Keep only rows where the new column is TRUE
+
+top_10_foods_sun_haven <- filtered_foods_sun_haven %>%
+  select(station, item,currency, stat_boost, ingredient_1, ingredient_2, ingredient_3) %>%
+  head(10)  # Select the top 10
+
+tibble(top_10_foods_sun_haven)
+
+```
+
+---
+
+# Conclusion 
+
+
+If the player is starting gameplay, a filtered search looking at recipes with:
+
+ Sun Haven (starting town), Spring
+
+Gives players a large amount of items that can be made at to permanently increase their mana stats.
+
+A more generalized search can help players optimize resource management after first year gameplay.
+
+In both instances, players can figure out farm and storage layout as well as where they would like to focus more of their time to increase the mana stat in order to more efficiently play the game. 

@@ -1,0 +1,43 @@
+﻿Town,Item,HP ,MP,Sell Price,Currency,Stat,Stat Boost
+Brinetone Deeps,Citrus Star Fruit,15,,3,Mana Orb,,
+Brinetone Deeps,Fathom Fruit,,12,1,Mana Orb,,
+Brinetone Deeps,Golden Fathom Fruit,,15,2,Mana Orb,Mana,very small
+Brinetone Deeps,Golden Nautitrine Fruit,,15,2,Mana Orb,Mana,very small
+Brinetone Deeps,Nautitrine Fruit,,13,1,Mana Orb,,
+Brinetone Deeps,Scallo Papaya,,15,2,Mana Orb,,
+Brinetone Deeps,Trench Nut,14,,2,Mana Orb,,
+NelVari,Golden Berry,15,,2,Mana Orb,Mana,small
+NelVari,Berry,,12,15,Gold,Mana,very small
+NelVari,Golden Fairy Cherry,15,,5,Mana Orb,Spell Damage,small
+NelVari,Fairy Cherry,15,,3,Mana Orb,Spell Damage,very small
+NelVari,Golden Gray Scale,15,,4,Mana Orb,Mana,very small
+NelVari,Gray Scale,,10,2,Mana Orb,Mana,very small
+NelVari,Golden Nectar-ine,15,,3,Mana Orb,Spell Damage,small
+NelVari,Nectar ine,10,,1,Mana Orb,Spell Damage,very small
+NelVari,Golden Sugar Plum,15,,6,Mana Orb,Spell Damage,small
+NelVari,Sugar Plum,10,15,4,Mana Orb,Spell Damage,very small
+Sun Haven,Apple,8,,6,Gold,Health,very small
+Sun Haven,Golden Berry,15,,2,Mana Orb,Mana,small
+Sun Haven,Berry,,12,15,Gold,Mana,very small
+Sun Haven,Blueberry,,12,12,Gold,Mana,very small
+Sun Haven,Golden Apple,15,,24,Gold,Health,small
+Sun Haven,Golden Blueberry,15,,45,Gold,Mana,small
+Sun Haven,Golden Orange,,15,45,Gold,,
+Sun Haven,Golden Peach,20,,125,Gold,Spell Damage,small
+Sun Haven,Golden Pomegranate,,,200,Gold,Health,2
+Sun Haven,Golden Pomegranate,,,200,Gold,Mana,2
+Sun Haven,Golden Raspberry,25,,100,Gold,Mana,small
+Sun Haven,Golden Strawberry,20,,75,Gold,Health,small
+Sun Haven,Golden Mushroom,,,2,Mana Orb,Health,small
+Sun Haven,Mushroom,16,,15,Gold,Health,small
+Sun Haven,Orange,10,,14,Gold,Health,small
+Sun Haven,Peach,,15,50,Gold,Spell Damage,very small
+Sun Haven,Raspberry,,12,20,Gold,Mana,very small
+Sun Haven,Seaweed,,10,15,Gold,Mana,very small
+Sun Haven,Strawberry,12,,22,Gold,Health,small
+Withergate,Golden Candy Corn Fruit,15,,2,Ticket,Health,small
+Withergate,Candy Corn Fruit,,20,1,Ticket,Health,very small
+Withergate,Golden Monster Fruit,15,,4,Ticket,Mana,small
+Withergate,Monster Fruit,20,,3,Ticket,Mana,very small
+Withergate,Sour Plum,,20,2,Ticket,Health,very small
+Withergate,Golden Sour Plum,15,,3,Ticket,Health,small

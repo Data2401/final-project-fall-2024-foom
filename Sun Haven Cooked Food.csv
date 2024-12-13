@@ -1,0 +1,392 @@
+﻿Station,Item,MP,HP,Currency,Sell Price,Stat,Stat Boost,Ingredient 1,Ingredient 2,Ingredient 3
+Tea Kettle,Indigo Tea,150,,Mana Orb,40,,,Indiglow,Mana,
+Tea Kettle,Fire Juice,,100,Mana Orb,30,,,Fire Fruit,Mana,
+Tea Kettle,Wind Chime Tea,65,,Mana Orb,18,,,Wind Chime,Mana,
+Tea Kettle,Bubble Tea,85,,Mana Orb,47,,,Water Fruit,Wind Chime,Mana
+Tea Kettle,Water Dragon Tea,130,,Mana Orb,38,,,Water Fruit,Dragon Fruit,Mana
+Tea Kettle,Fire Dragon Tea,75,40,Mana Orb,35,,,Fire Fruit,Dragon Fruit,Mana
+Tea Kettle,Earth Dragon Tea,55,55,Mana Orb,30,,,Rock Fruit,Dragon Fruit,Mana
+Tea Kettle,Nectar ine Tea,30,,Mana Orb,7,,,Nectar ine,Fire Crystal,Mana
+Tea Kettle,Fairy Cherry Water ,30,,Mana Orb,11,,,Fairy Cherry,Mana,
+Tea Kettle,Gray Scale Tea,15,25,Mana Orb,8,,,Gray Scale ,Mana,
+Tea Kettle,Sugar Plum Tea,25,15,Mana Orb,14,,,Sugar Plum ,Mana,
+Elven Juicer,Elemental Cocktail,60,60,Mana Orb,28,,,Water Fruit,Fire Fruit,Rock Fruit
+Elven Juicer,Catsup,,100,Mana Orb,33,,,Cat Tail,Mana,
+Elven Juicer,Dragon Tea,70,30,Mana Orb,33,,,Dragon Fruit,Mana,
+Elven Juicer,Mana Water,90,,Mana Orb,26,,,Mana Gem,Mana,
+Elven Juicer,Magical Water,80,,Mana Orb,44,,,Water Fruit,Mana,
+Elven Juicer,Rocky Road Smoothie,20,65,Mana Orb,23,,,Rock Fruit,Mana,
+Elven Juicer,Acorn Milk,65,,Mana Orb,21,,,Acorn,Mana,
+Elven Juicer,Spicy Catsup,,100,Mana Orb,28,,,Fire Fruit,Cat Tail,Mana
+Elven Juicer,Nectar ine Smoothie,20,10,Mana Orb,5,Temp Mana Reg,,Nectar ine,Mana,
+Elven Juicer,Fairy Cherry Water ,15,,Mana Orb,6,,,Fairy Cherry,Mana,
+Elven Juicer,Gray Scale Smoothie,15,15,Mana Orb,8,,,Gray Scale ,Mana,
+Elven Juicer,Sugar Plum Juice,15,15,Mana Orb,14,Temp Speed ,,Sugar Plum ,Mana,
+Cooking Pot,Tortilla,,25,Gold,140,Health,moderate,Corn Flour,,
+Cooking Pot,Cheese,55,,Gold,406,Mana,small,Milk,,
+Cooking Pot,Fried Carp,,20,Gold,65,Health,large,Carp,,
+Cooking Pot,Two Peas and a Pod,10,15,Gold,215,,,Peas,Green Beans,
+Cooking Pot,Tomato Soup,30,15,Gold,205,Attack,small,Tomato,Corn,
+Cooking Pot,Mashed Potatoes,20,20,Gold,301,Defense,small,Potato,Milk,
+Cooking Pot,Egg Hash,20,25,Gold,238,Defense,moderate,Egg ,Potato,
+Cooking Pot,Fried Rice,20,30,Gold,348,Health,small,Rice,Egg,Greenspice
+Cooking Pot,Clam Chowder,10,25,Gold,215,Defense,small ,Clam,Flour,Potato
+Cooking Pot,Creamy Beef Stew,,35,Gold,370,Defense,large,Potato,Carrot,Onion
+Cooking Pot,Cookies,10,15,Gold,348,Attack,very small,Sugar,Flour,Egg
+Cooking Pot,Egg Tarts,25,30,Gold,411,Mana,small,Egg ,Flour,Milk
+Cooking Pot,Popcorn ,,25,Gold,135,Speed,small,Corn,,
+Cooking Pot,Beginner's Apple Pie,,25,Gold,200,Mana,small,Apple,Flour,Sugar
+Cooking Pot,Pot Pie,,30,Gold,304,Defense,very small,Flour,Carrot,Potato
+Cooking Pot,California Roll,,25,Gold,175,Spell Damage,very small,Seaweed,Crab,Rice
+Cooking Pot,Chicken Noodle Soup,,35,Gold,342,HP Regen,small,Egg ,Noodles,Carrot
+Cooking Pot,Tomato Salad,,45,Gold,503,Attack,moderate,Lettuce,Onion,Tomato
+Cooking Pot,Blueberry Salad,35,10,Gold,255,Mana,small,Blueberry,Lettuce,
+Cooking Pot,Pickled Veggie Salad,40,30,Gold,450,Mana,small,Lettuce,Tomato,Greenspice
+Cooking Pot,Red Veggie Soup,,70,Gold,575,Attack,huge,Carrot,Pepper,Onion
+Cooking Pot,Sesame Rice Ball,30,,Gold,155,Mana,small,Rice,Seaweed,
+Cooking Pot,Spaghetti,20,15,Gold,205,Attack,small,Noodles,Tomato,
+Cooking Pot,Stuffed Casserole,60,,Gold,563,Defense,large,Flour,Cheese,Mushroom
+Cooking Pot,Fish Taco,60,,Gold,473,Spell Damage,small,Tortilla,Tiger Trout,Lettuce
+Cooking Pot,Creamy Mushroom Soup,40,5,Gold,359,Attack,moderate,Mushroom,Milk,Onion
+Cooking Pot,Tuna Nigiri,,30,Gold,195,HP Regen,moderate,Rice,Tuna,
+Cooking Pot,Nachos,75,,Gold,731,Mana,moderate,Tortilla Chips,Cheese,Greenspice
+Cooking Pot,Salsa,40,5,Gold,351,Attack,small,Onion,Tomato,Greenspice
+Cooking Pot,Tortilla Chips,,30,Gold,155,Attack,moderate,Tortilla,,
+Cooking Pot,Waffles,45,10,Gold,411,Mana,small,Egg ,Flour,Milk
+Cooking Pot,Mushroom Risotto,10,20,Gold,245,Health,small,Mushroom,Greenspice,Rice
+Cooking Pot,Pad Thai,40,15,Gold,240,Health,small,Egg ,Noodles,Peanuts
+Cooking Pot,Mochi,,25,Gold,260,Mana,small,Rice,Sugar,
+Cooking Pot,Lobster Roll,40,5,Gold,445,Attack,moderate,Bread,Lobster,Egg
+Cooking Pot,Potato Salad ,,35,Gold,458,Defense,moderate,Potato,Egg,Greenspice
+Cooking Pot,Lasagna,75,85,Gold,743,Mana,moderate,Noodles,Tomato,Cheese
+Cooking Pot,Apple Cider,60,,Gold,400,Spell Damage,small,Apple,Cinnaberry,Water Crystal
+Cooking Pot,Strawberry Milk,,25,Gold,238,Mana,small,Strawberry,Milk,
+Cooking Pot,Veggie Kebab,10,30,Gold,390,Health,small,Tomato,Mushroom,Lettuce
+Cooking Pot,Blueberry Muffin,,35,Gold,229,Mana,small,Blueberry,Flour,Egg
+Cooking Pot,Fruit Punch,,45,Gold,130,Mana Regen,very small,Strawberry,Orange,Water Crystal
+Cooking Pot,Berry Fruit Island,30,,Gold,195,Spell Damage,very small,Honey,Blueberry,Strawberry
+Cooking Pot,Apple Sauce,,60,Gold,460,Mana,small,Apple,Sugar,Cinnaberry
+Cooking Pot,Mochi Covered Strawberry,,35,Gold,305,Spell Damage,very small,Strawberry,Rice,Sugar
+Cooking Pot,Strawberry Shortcake,20,20,Gold,240,Health,small,Strawberry,Flour,Sugar
+Cooking Pot,Citrus Salad ,10,20,Gold,240,HP Regen,very small,Orange,Onion,Greenspice
+Cooking Pot,Acai Bowl,25,,Gold,100,Mana Regen,very small,Berry,Blueberry,Strawberry
+Cooking Pot,Peaches and Cream,40,20,Gold,390,Attack,small,Peach,Milk,Sugar
+Cooking Pot,Raspberry Crepes,25,,Gold,255,Mana,small,Raspberry,Egg,Flour
+Cooking Pot,Fruit Tart,40,,Gold,206,Mana,small,Raspberry,Blueberry,Egg
+Cooking Pot,Linguine with Clams,20,20,Gold,190,HP Regen,small,Clam,Noodles,Greenspice
+Cooking Pot,Fruit Snacks,25,,Gold,110,Mana,very small,Blueberry,Strawberry,Raspberry
+Cooking Pot,Spring Roll,70,,Gold,630,Spell Damage,small,Lettuce,Greenspice,Pepper
+Cooking Pot,Cinnamon Apple Pie,60,,Gold,430,Mana,small,Cinnaberry,Apple,Sugar
+Cooking Pot,Energy Smoothie,45,,Gold,100,Mana Regen,small,Water Crystal,Apple,Orange
+Cooking Pot,Honeyglazed Apple,40,,Gold,140,Mana,small,Apple,Honey,
+Cooking Pot,Peach Cobbler,25,5,Gold,295,Spell Damage,very small,Peach,Flour,Egg
+Cooking Pot,Caribbean Green Soup,45,,Gold,665,Attack,moderate,Lettuce,Pepper,Onion
+Cooking Pot,BLT,60,,Gold,527,Mana,small,Bread,Lettuce,Tomato
+Cooking Pot,Yogurt,20,,Gold,219,,,Milk,,
+Cooking Pot,Yogurt Parfait,60,,Gold,380,Mana,small,Milk,Strawberry,Honey
+Cooking Pot,Chocolate Milk,10,30,Gold,300,,,Milk ,Chocolate,
+Cooking Pot,Ice Cream,40,5,Gold,366,Mana,small,Ice Cube,Honey,Milk
+Cooking Pot,Omelet,40,10,Gold,353,Health,small,Egg ,Tomato,Greenspice
+Cooking Pot,Veggie Wrap,60,,Gold,530,HP Regen,very small,Tortilla,Lettuce,Tomato
+Cooking Pot,Fish and Chips,,25,Gold,216,Defense,small,Streamline Cod ,Potato,Flour
+Cooking Pot,Mushroom Stroganoff,,30,Gold,175,Spell Damage,very small,Noodles,Mushroom,Greenspice
+Cooking Pot,Lobster Bisque,40,5,Gold,348,Attack,moderate,Lobster,Milk ,Greenspice
+Cooking Pot,Grilled Cheese,60,,Gold,620,Mana,large,Cheese,Bread,
+Cooking Pot,Onion Rings,15,30,Gold,342,Defense,moderate,Onion,Flour,Egg
+Cooking Pot,Trail Mix,40,40,Gold,230,Mana,small,Apple,Sugar,Peanuts
+Cooking Pot,Sweet and Spicy Shrimp,40,50,Gold,350,Attack,moderate,Deadeye Shrimp,Honey,Hot Sauce
+Cooking Pot,Seafood Gumbo,,40,Gold,350,Attack,moderate,Deadeye Shrimp,Crab,Clam
+Cooking Pot,Poke Bowl,,35,Gold,235,Mana,small,Salmon,Tuna,Rice
+Cooking Pot,Churros,70,,Gold,702,Mana,very small,Cinnaberry,Flour,Sugar
+Cooking Pot,Spicy Ramen,,40,Gold,360,Attack,small,Noodles,Pepper,
+Cooking Pot,Pizza,50,70,Gold,736,Health,large,Cheese,Tomato,Flour
+Cooking Pot,Cheeseburger,40,40,Gold,852,Defense,moderate,Cheese,Lettuce,Bread
+Cooking Pot,Cheesecake,85,,Gold,944,Spell Damage,small,Cheese,Milk,Sugar
+Cooking Pot,Shimmeroot Treat,75,75,Gold,900,Spell Damage,small,Shimmeroot,Cinnaberry,
+Cooking Pot,Tika Masala,75,75,Gold,970,Defense,large,Shimmeroot,Greenspice,Pepper
+Cooking Pot,Tomato Juice,,70,Gold,880,Defense,moderate,Tomato,Flour,
+Cooking Pot,Tomato Bread,20,100,Gold,1450,Defense,moderate,Flour,Tomato Juice,Sugar
+Cooking Pot,Cooled Lava Honey,25,20,Gold,113,,,Lava Honey,,
+Cooking Pot,Candid Yams,120,,Gold,350,Spell Damage,very small,Yam,Sugar,
+Cooking Pot,Steamed Eggplant,10,10,Gold,155,,,Purple Eggplant,,
+Cooking Pot,Rice Pilaf,10,20,Gold,275,,,Rice,Onion,
+Cooking Pot,Roasted Turnip,10,10,Gold,235,Defense,small,Turnip,Onion,
+Cooking Pot,Steak,10,10,Gold,380,,,Meat,Garlic,
+Cooking Pot,Strawberry Salad,,35,Gold,500,,,Strawberry,Lettuce,
+Cooking Pot,Deviled Eggs,10,30,Gold,550,,,Egg ,Lemon,
+Cooking Pot,Mushroom Toast,10,20,Gold,260,,,Mushroom,Bread,
+Cooking Pot,Hummus,,35,Gold,440,,,Peas,Lemon,
+Cooking Pot,Spicy Noodles,40,20,Gold,640,,,Pepper,Noodles,
+Cooking Pot,Short Ribs,,30,Gold,240,Defense,very small,Meat,,
+Cooking Pot,Grilled Pineapple,10,30,Gold,425,,,Pineapple,,
+Cooking Pot,Squid Tacos,10,20,Gold,300,,,Tortilla,Scorching Squid,Clover
+Cooking Pot,Stuffed Peppers,20,40,Gold,775,,,Pepper,Onion,
+Cooking Pot,Butternut Mac and Cheese,20,40,Gold,860,,,Butternut,Noodles,Cheese
+Cooking Pot,Gnocchi,10,30,Gold,420,,,Noodles,Potato,Barley
+Cooking Pot,Eggplant Ravioli,,40,Gold,450,,,Noodles,Eggplant,
+Cooking Pot,Chili,20,70,Gold,935,,,Meat,Tomato,
+Cooking Pot,Charcuterie Board,20,30,Gold,635,,,Cheese,Peanuts,Apple
+Cooking Pot,Frostfin Seltzer,25,10,Gold,315,,,Frostfin,Tomato,
+Cooking Pot,Blizzard Berry Stew,50,20,Gold,825,,,Blizzard Berry,Wheat,
+Cooking Pot,Van Fettuccine Alfredo,,80,Gold,1000,,,Noodles,Cheese,Yam
+Cooking Pot,Golden Macrons,70,70,Gold,1185,Defense,large,Egg ,Butter,Flour
+Cooking Pot,Golden Berry Porridge,75,60,Gold,335,Health,small,Golden Berry,Berry,Barley
+Cooking Pot,Golden Berry Smoothie,85,,Mana Orb,8,Mana,small,Golden Berry,Berry,
+Cooking Pot,Golden Egg on Rice,55,55,Gold,835,Health,small,Golden Egg,Rice,
+Cooking Pot,Golden Mac and Cheese,75,75,Gold,1295,Health,huge,Golden Milk,Noodles,Cheese
+Cooking Pot,Golden Milk Cake,175,,Gold,2500,Health,huge,Golden Milk,Egg,Butter
+Cooking Pot,Golden Mushroom Burger,70,70,Mana Orb,21,Mana,huge,Golden Mushroom,Bread,Tomato
+Cooking Pot,Golden Omelette,100,100,Gold,375,Health,huge,Golden Egg,Golden Mushroom,
+Cooking Pot,Golden Potato Salad,,100,Gold,1120,Health,moderate,Golden Egg,Potato,Carrot
+Cooking Pot,Golden Sandwhich,60,60,Ticket,30,Attack,moderate,Golden Sand,Bread,Seaweed
+Cooking Pot,Golden Scambled Eggs,100,50,Gold,2000,Health,small,Golden Egg,Cheese,Mushroom
+Cooking Pot,Golden Slime Ink Pasta,75,75,Ticket,,Attack,moderate,Golden Slime Ink,Noodles,
+Cooking Pot,Golden Slime Ink Soup,60,70,Ticket,55,Health,huge,Golden Slime Ink,Albino Squid,
+Cooking Pot,Golden Spicy Noodles,85,,Mana Orb,20,Mana,huge,Golden Fire Rune,Noodles,Greenspice
+Cooking Pot,Brine Berry Salad,,30,Mana Orb,9,Mana,very small,Brine Berry,Seaweed,
+Cooking Pot,Scallo Papaya Fritters,65,,Mana Orb,16,Mana,very small,Scallo-Papaya,Egg,
+Cooking Pot,Nautitrine Crab Kabob,35,,Mana Orb,8,Mana,very small,Nautirine Fruit,Crab,
+Cooking Pot,Peach Trench Nut,,60,Mana Orb,20,Mana,very small,Trench Nut,Milk,
+Cooking Pot,Citrus Star Soup,,60,Mana Orb,18,Spell Damage,very small,Citrus Star Fruit,Water Crystal,
+Cooking Pot,Fathom Fruit Linguine,,30,Mana Orb,6,Mana,very small,Fathom Fruit,Noodles,
+Cooking Pot,Citrus Star Fruit,,70,Mana Orb,21,Spell Damage,very small,Citrus Star Fruit,Flour,
+Cooking Pot,Trench Nut Crumble,,48,Mana Orb,15,Mana,very small,Trench Nut,Flour,
+Cooking Pot,Brimestone Boil,35,35,Mana Orb,18,Mana,very small,Scallo Papaya,Citrus Star Fruit,Fathom Fruit
+Cooking Pot,Golden Fathom Fruit Stirfry,75,,Mana Orb,7,Mana,huge,Golden Fathom Fruit,Mushroom,Seaweed
+Cooking Pot,Golden Scallo Papaya Risotto,140,140,Mana Orb,50,Spell Damage,moderate,Golden Scallo Papaya,Cheese,Yam
+Cooking Pot,Golden Citrus Star Fruit Rice Bowl,,70,Mana Orb,16,Attack,moderate,Golden Citrus Star Fruit,Rice,Tuna Sashimi
+Cooking Pot,Golden Brinestone Feast,70,70,Mana Orb,15,Mana,huge,Golden Brine Berry,Golden Trench Nut,Golden Nautitrine Fruit
+Oven,Bread,,25,Gold,155,Health,moderate,Dough,,
+Oven,Banana Bread,,40,Gold,220,,,Dough,Squashed Banana,
+Oven,Apple Pie,,50,Gold,470,,,Pie Crust,Sugar ,Apple
+Oven,Blueberry Pie,50,,Gold,480,,,Pie Crust,Sugar,Blueberry
+Oven,Mushroom Pie,30,30,Gold,570,,,Pie Crust,Sugar,Mushroom
+Oven,Hearty Pie,15,50,Gold,690,,,Pie Crust,Egg,Meat
+Oven,Strawberry Pie,,55,Gold,539,,,Pie Crust,Sugar,Strawberry
+Oven,Berry Pie,55,,Gold,595,,,Pie Crust,Sugar,Berry
+Oven,Raspberry Pie,30,30,Gold,720,Health,small,Pie Crust,Sugar,Raspberry
+Oven,Hearty Armor Pie,,100,Gold,1600,,,Pie Crust,Meat,Armoranth
+Oven,Lemon Meringue,70,70,Gold,1700,Spell Damage,small,Pie Crust,Custard,Lemon
+Oven,Cake Pop,25,25,Gold,500,Temp Speed ,,Cake Mix,,
+Oven,Apple Cake,,65,Gold,760,,,Cake Mix,Sugar,Apple
+Oven,Blueberry Cake,65,,Gold,780,,,Cake Mix,Sugar,Blueberry
+Oven,Orange Cream Cake,40,40,Gold,810,,,Cake Mix,Milk,Orange
+Oven,Strawberry Cake,30,65,Gold,840,,,Cake Mix,Sugar,Strawberry
+Oven,Berry Cake,65,25,Gold,860,,,Cake Mix,Sugar,Berry
+Oven,Black Forest Cake,,85,Gold,1125,,,Cake Mix,Chocolate,Raspberry
+Oven,Peach Cream Cake,80,,Gold,970,,,Cake Mix,Milk,Peach
+Oven,Sugar Cake ,80,,Gold,850,,,Cake Mix,Sugar,
+Oven,Chocolate Cake,85,,Gold,1150,,,Cake Mix,Chocolate,
+Oven,Red Velvet Cake,80,,Gold,980,,,Cake Mix,Chocolate,Butter
+Oven,Carrot Cake,50,40,Gold,1080,,,Cake Mix,Carrot,
+Oven,Lemon Cake,,60,Gold,680,,,Cake Mix,Lemon,
+Oven,Chocolate Cupcake,50,,Gold,580,,,Cupcake Mix,Chocolate,
+Oven,Red Velvet Cupcake,35,35,Gold,680,,,Cupcake Mix,Chocolate,Butter
+Oven,Persian Love Cake,,140,Gold,1700,,,Cake Mix,Sugar,Red Rose
+Oven,Withercake,,120,Gold,1500,,,Cake Mix,Sugar,Spooky Silk
+Oven,Honeycomb Cake,35,35,Gold,720,,,Cake Mix,Honey,
+Oven,Blue Rose Cake,75,,Gold,880,,,Cake Mix,Sugar,Blue Rose
+Oven,Cinnamon Cake,50,30,Gold,930,,,Cake Mix,Cinnamon,
+Oven,Creme Brulee,70,,Gold,570,Spell Damage,small,Custard,Sugar,Mana
+Oven,Chocolate Pudding,30,45,Gold,750,,,Custard,Chocolate,
+Oven,Flan,75,,Gold,800,,,Custard,Milk,Egg
+Oven,Plain Tart,,40,Gold,420,,,Custard,,
+Oven,Eclair,35,35,Gold,670,,,Custard,Dough,Chocolate
+Oven,Souffle,70,,Gold,780,,,Custard,Egg ,Mana
+Oven,Cheese Souffle,80,20,Gold,1080,,,Custard,Egg,Cheese
+Oven,Chocolate Tart,80,,Gold,900,,,Custard,Chocolate,Egg
+Oven,Caramel Creme Brulee,85,,Gold,1180,,,Custard,Caramel ,Mana
+Oven,Sugar Plum Pie,85,,Mana Orb,29,Mana,small amount,Sugar Plum ,Flour,
+Oven,Elven Forest Cake,65,20,Mana Orb,23,Health,moderate,Fairy Cherry,Flour,
+Oven,Nectar ine Crumble,30,30,Mana Orb,11,Defense,small,Nectar ine,Flour,
+Oven,Candy Popcorn,,50,Ticket,6,Health,small,Candy Corn Fruit,Corn,
+Oven,Monster Fruit Granola Bar,,50,Ticket,9,Spell Damage,moderate,Monster Fruit,Berry,Peanuts
+Oven,Tomato Bread,20,100,Gold,1450,Defense,moderate,Flour,Tomato Juice,Sugar
+Oven,Tomato Juice,,70,Gold,880,Defense,moderate,Tomato,Sugar,
+Oven,Golden Upside Down Trench Nut Cake,45,55,Mana Orb,22,Spell Damage,very small,Golden Trench Nut,Cake Mix,
+Oven,Golden Brine Berry Pavlova,50,45,Mana Orb,45,Health,huge,Golden Brine Berry,Egg,Milk
+Baker's Station,Flour,,10,Gold,60,,,Wheat,,
+Baker's Station,Dough,,8,Gold,66,,,Flour,,
+Baker's Station,Noodles,,10,Gold,60,,,Wheat,,
+Baker's Station,Sugar,12,,Gold,125,Mana,very small,Sugar Cane,,
+Baker's Station,Butter,35,,Gold,200,Mana,very small,Milk,,
+Baker's Station,Greenspice,8,,Gold,70,,,Greenspice,,
+Baker's Station,Corn Flour,,12,Gold,130,,,Corn,,
+Baker's Station,Cinnamon,,25,Gold,250,Health,very small,Cinnaberry,,
+Baker's Station,Caramel,12,,Gold,100,Mana,very small,Sugar,,
+Baker's Station,Chocolate,10,,Gold,50,,,Chocoberry,,
+Baker's Station,Custard,35,,Gold,340,Mana,very small,Milk ,Egg,
+Baker's Station,Cheese,55,,Gold,406,Mana,small,Milk,,
+Baker's Station,Ice Cream Base,8,,Gold,200,,,Milk,,
+Baker's Station,Pie Crust,30,,Gold,300,Mana,very small,Dough,Butter,
+Baker's Station,Cake Mix,40,25,Gold,400,Mana,small,Milk,Egg,Flour
+Baker's Station,Cupcake Mix,15,15,Gold,200,Health,small,Egg ,Flour,
+Juicer,Glass of Pure Water,40,,Gold,80,Temp Health Reg,,Water Crystal,,
+Juicer,Apple Juice,,25,Gold,60,,,Apple,,
+Juicer,Orange Juice,,28,Gold,45,,,Orange,,
+Juicer,Carrot Juice,25,,Gold,335,Temp Speed ,,Carrot,,
+Juicer,Pineapple Juice,20,,Gold,140,,,Pineapple,,
+Juicer,Grape Juice,25,,Gold,210,Temp Mana Reg,,Grapes,,
+Juicer,Strawberry Juice,,35,Gold,90,,,Strawberry,,
+Juicer,Kale Juice,20,,Gold,220,,,Kale,,
+Juicer,Tropical Juice,40,15,Gold,465,,,Pineapple,Mango,
+Juicer,Lemonade,20,20,Gold,320,,,Lemon,Sugar,
+Juicer,Sugarcane Juice,18,,Gold,150,,,Sugarcane,,
+Juicer,Yucky Green Juice,25,,Gold,25,,,Dandelion,,
+Juicer,Blueberry Smoothie,25,,Gold,70,,,Blueberry,,
+Juicer,Mixed Berry Smoothie45,20,,Gold,205,,,Strawberry,Blueberry,Raspberry
+Juicer,Raspberry Smoothie,35,,Gold,100,,,Raspberry,,
+Juicer,Strawberry Banana Smoothie,,45,Gold,105,,,Strawberry,Squashed Banana,
+Juicer,Brr nana Smoothie,,25,Gold,140,,,Brr Nana,,
+Juicer,Kiwi Juice,20,30,Gold,300,,,Kiwi Berry,,
+Juicer,Watermelon Juice,,50,Gold,475,,,Watermelon,,
+Juicer,Galaxy Smoothie,50,50,Gold,1000,,,Blue Moon Fruit,Star Fruit,
+Juicer,Scallo Papaya Smoothie,38,,Mana Orb,16,Mana,,Scallo Papaya,Ice Cream Base,
+Juicer,Citrus Star Juice,,36,Mana Orb,9,,,Citrus Star Fruit,,
+Juicer,Trench Nut Milk,,33,Mana Orb,6,,,Trench Nut,,
+Juicer,Nautitrine Juice,32,,Mana Orb,3,,,Nautirine Fruit,,
+Ice Cream Cart,Apple Crisp Ice Cream,,40,Gold,160,Spell Damage,small,Ice Cream Base,Apple,
+Ice Cream Cart,Blueberry Ice Cream,45,,Gold,220,Spell Damage,small,Ice Cream Base,Blueberry,
+Ice Cream Cart,Strawberry Ice Cream,35,35,Gold,305,Spell Damage,small,Ice Cream Base,Strawberry,
+Ice Cream Cart,Berry Ice Cream,20,35,Gold,260,Spell Damage,small,Ice Cream Base,Berry,
+Ice Cream Cart,Raspberry Sorbet,45,10,Gold,380,Spell Damage,small,Ice Cream Base,Raspberry,
+Ice Cream Cart,Seaweed Ice Cream,30,20,Gold,150,Spell Damage,small,Ice Cream Base,Seaweed,
+Ice Cream Cart,Sandy Ice Cream,50,,Gold,160,Spell Damage,small,Ice Cream Base,Sand,
+Ice Cream Cart,Chocolate Ice Cream,25,45,Gold,450,Spell Damage,small,Ice Cream Base,Chocolate,
+Ice Cream Cart,Cheesecake Ice Cream,110,20,Gold,1500,Spell Damage,small,Ice Cream Base,Cheesecake,
+Ice Cream Cart,The Prehistoric Special,45,,Gold,190,Spell Damage,small,Ice Cream Base,Stone,
+Ice Cream Cart,Cinnamon Ice Cream,25,40,Gold,525,Spell Damage,very small,Ice Cream Base,Cinnamon,
+Ice Cream Cart,Neapolitan Ice Cream,35,15,Mana Orb,15,Spell Damage,small,Ice Cream Base,Neapolitan Fish,
+Ice Cream Cart,Nectar ine Sorbet,35,20,Mana Orb,9,Spell Damage,small,Ice Cream Base,Nectar ine,
+Ice Cream Cart,Fairy Cherry Ice Cream,60,,Mana Orb,22,Spell Damage,small,Ice Cream Base,Fairy Cherry,
+Ice Cream Cart,Double Scoop Monster,,65,Ticket,25,Spell Damage,small,Ice Cream Base,Monster Fruit,
+Ice Cream Cart,Sour Plum Sorbet,60,,Ticket,16,Spell Damage,small,Ice Cream Base,Sour Plum,
+Ice Cream Cart,Just Peachy Double Soop,50,20,Mana Orb,11,Spell Damage,small,Ice Cream Base,Nectar ine,
+Ice Cream Cart,Nautitr ine Sorbet,35,,Mana Orb,8,Mana,huge,Nautirine Fruit,Ice Cream Base,
+Ice Cream Cart,Brine Berry Sorbet,,55,Mana Orb,16,Mana,huge,Brine Berry,Ice Cream Base,
+Sushi Table,Sandstone Sashimi,45,,Gold,185,Mana,small,Sandstone Fish,,
+Sushi Table,Tuna Sashimi,,25,Gold,115,Mana,very small,Tuna,,
+Sushi Table,Pufferfish Sashimi,30,,Gold,110,Mana,very small,Pufferfish,,
+Sushi Table,Cod Sashimi,10,30,Gold,80,Mana,very small,Streamline Cod ,,
+Sushi Table,Crab Roll,30,10,Gold,115,Mana,very small,Crab,,
+Sushi Table,Tekka Maki,45,,Gold,230,Mana,small,Tuna,,
+Sushi Table,Salmon Roll,,30,Gold,240,Mana,small,Salmon,,
+Sushi Table,Swordfish Sashimi,,30,Gold,160,Mana,small,Blunted Swordfish,,
+Sushi Table,Rainbow Roll,20,,Gold,75,Mana,very small,Rainbow Trout,,
+Sushi Table,Eel Roll,30,10,Gold,140,Mana,very small,Eel,,
+Sushi Table,Red Snapper Sashimi,30,10,Gold,150,Mana,small,Red Snapper,,
+Sushi Table,Tiger Roll,,45,Gold,110,Mana,very small,Tiger Trout,,
+Sushi Table,Lobster Roll,30,15,Gold,90,Mana,small,Lobster,,
+Sushi Table,Earlygator Roll,20,35,Gold,365,Mana,very small,Earlygator,,
+Sushi Table,Squawkmouth Bass Roll,10,15,Gold,50,Mana,very small,Squawkmouth Bass,,
+Sushi Table,Bucketfish Sashimi,20,15,Gold,110,Mana,very small,Bucketfish,,
+Sushi Table,Haloopbut Sashimi,15,15,Gold,70,Mana,very small,Haloopbut,,
+Fish Grill,Roasted Black Bass,18,18,Gold,45,Health,small,Black Bass,,
+Fish Grill,Roasted Dorado,15,,Gold,35,Health,small,Dorado,,
+Fish Grill,Roasted Flower Flounder ,15,,Gold,85,Health,small,Flower Flounder,,
+Fish Grill,Roasted Old Boot,,,Gold,50,Health,small,Old Boot,,
+Fish Grill,Roasted Rainbow Trout,25,,Gold,45,Health,small,Rainbow Trout,,
+Fish Grill,Roasted Sea Bass,10,10,Gold,37,Health,small,Sea Bass,,
+Fish Grill,Roasted Tuna,,30,Gold,75,Health,small,Tuna,,
+Fish Grill,Grilled Blue Tang,30,,Gold,130,Spell Damage,small,Blue Tang,Fire Crystal,
+Fish Grill,Grilled Carp,30,,Gold,200,Spell Damage,small,Carp,Fire Crystal,
+Fish Grill,Grilled Catfish,20,10,Gold,145,Spell Damage,small,Catfish,Fire Crystal,
+Fish Grill,Grilled Crab,,30,Gold,130,Spell Damage,small,Crab,Fire Crystal,
+Fish Grill,Grilled Frostfin,,30,Gold,135,Spell Damage,small,Frostfin,Fire Crystal,
+Fish Grill,Grilled Whitebelly Shark,30,,Gold,400,Spell Damage,small,Whitebelly Shark,Fire Crystal,
+Fish Grill,Leaf Wrapped Averagemouth Bass,10,20,Gold,60,Mana,very small,Averagemouth Bass,Leafie's Leaf,
+Fish Grill,Leaf Wrapped Bashful Pike,10,20,Gold,60,Mana,very small,Bashful Pike,Leafie's Leaf,
+Fish Grill,Leaf Wrapped Blue Gill,20,,Gold,60,Mana,very small,Blue Gill,Leafie's Leaf,
+Fish Grill,Leaf Wrapped Cuddlefish,20,10,Gold,90,Mana,very small,Cuddlefish,Leafie's Leaf,
+Fish Grill,Leaf Wrapped Ribbon Eel,20,10,Gold,300,Mana,small,Ribbon Eel,Leafie's Leaf,
+Fish Grill,Leaf Wrapped Searback,,30,Gold,65,Mana,very small,Searback,Leafie's Leaf,
+Fish Grill,Leaf Wrapped Silver Carp,10,20,Gold,95,Mana,very small,Silver Carp,Leafie's Leaf,
+Fish Grill,Leaf Wrapped Tiger Trout,,30,Gold,90,Mana,very small,Tiger Trout,Leafie's Leaf,
+Fish Grill,Seared Acorn Anchovy,30,,Gold,60,Defense,small,Acorn Anchovy,Tin Foil,
+Fish Grill,Seared Ironhead Sturgeon,20,,Gold,120,Defense,small,Ironhead Sturgeon,Tin Foil,
+Fish Grill,Seared Lobster,,40,Gold,140,Defense,small,Lobster,Tin Foil,
+Fish Grill,Seared Pufferfish,,30,Gold,115,Health,small,Pufferfish,Tin Foil,
+Fish Grill,Seared Red Snapper,20,10,Gold,155,Health,small,Red Snapper,Tin Foil,
+Fish Grill,Golden Grilled Nautitrine and Pepper Salmon,20,20,Mana Orb,8,Mana,huge,Goldene Nautitrine Fruit,Salmon,Greenspice
+Fish Grill,Grilled Earlygator,35,35,Gold,385,Spell Damage,small,Earlygator,Fire Crystal,
+Fish Grill,Grilled Bucketfish,35,,Gold,130,Spell Damage,very small ,Bucketfish,Fire Crystal,
+Fish Grill,Leaf Wrapped Haloopbut,20,15,Gold,75,Mana,very small ,Haloopbut,Leafie's Leaf,
+Fish Grill,Leaf Wrapped Squawkmouth Bass,30,,Gold,55,Mana,very small ,Squawkmouth Bass,Leafie's Leaf,
+Fish Grill,Roasted Earlygator,25,30,Gold,365,Health,small ,Earlygator,,
+Fish Grill,Roasted Squawkmouth Bass,25,,Gold,50,Health,very small ,Squawkmouth Bass,,
+Fish Grill,Seared Haloopbut,,35,Gold,80,Defense,small,Haloopbut,Tin Foil,
+Fish Grill,Seared Bucketfish,,40,Gold,115,Defense,small,Bucketfish,Tin Foil,
+Seltzer Keg,Princess Pop,40,,Gold ,260,,,Soda Pop Crop,,
+Seltzer Keg,Fizzy Fruit Gel,,40,Gold,260,,,Fizzy Fruit,,
+Seltzer Keg,Fizzy Seltzer,,40,Gold,275,,,Hops,,
+Seltzer Keg,Spiced Cocoa,40,,Gold,425,,,Hops,Candy Cane,
+Seltzer Keg,Bitter Seltzer,,40,Gold,250,,,Barley,,
+Seltzer Keg,Cream Seltzer,30,30,Gold,275,,,Butternut,,
+Seltzer Keg,Tea,15,,Gold,220,,,Tea Leaves,,
+Seltzer Keg,Hot Chocolate,50,,Gold,350,,,Marshmallow Bean,Chocolate,Fire Crystal
+Seltzer Keg,Cinnamon Spice Latte,,65,Gold,540,Spell Damage,small,Cinnaberry,Greenspice,Fire Crystal
+Seltzer Keg,Magically Delicious Drink,60,,Gold,560,,,Heart Berry,Star Fruit,Clover
+Seltzer Keg,Fancy Grape Juice,40,,Gold,250,,,Grapes,,
+Seltzer Keg,Coffee,35,,Gold,600,Speed,small,Coffee Bean,,
+Monster Juicer,Razorstalk Tea,,85,Ticket,34,,,Razorstalk,Health,
+Monster Juicer,Demon Coffee,,80,Ticket,30,,,Demon Orb,Health,
+Monster Juicer,Snappy Juice,,140,Ticket,55,,,Snappy Plant,Health,
+Monster Juicer,Demon Energy Juice,,40,Ticket,17,,,Kraken Kale,Health,
+Monster Juicer,Demonsoul Latte,80,,Ticket,30,,,Demon Orb,Health,
+Monster Juicer,Candy Corn Fruit Smoothie,,50,Ticket,4,Health,small,Candy Corn Fruit,Health,
+Monster Juicer,Monster Fruit Mocha,,40,Ticket,9,Temp Health Reg,,Monster Fruit,Health,
+Monster Juicer,Sour Plum Tea,40,,Ticket,6,,,Sour Plum,Health,
+Monster Sushi Table,Spiked Salmon Sashimi,,35,Ticket,9,,,Spike Salmon,,
+Monster Sushi Table,Ghoul Fish Roll,70,,Ticket,22,,,Ghoul Fish,Seaweed,Rice
+Monster Sushi Table,Dumbo Octopus Takoyaki,20,40,Ticket,26,,,Dumbo Octopus,Egg,
+Monster Sushi Table,Jack'o'fin Sashimi,30,30,Ticket,14,,,Jack'o'fin,,
+Monster Sushi Table,Deadeye Shrimp,50,50,Ticket,45,,,Deadeye Shrimp,Tomato,Carrot
+Monster Sushi Table,Electric Eel Sushi,30,30,Ticket,18,,,Electric Eel,Seaweed,Rice
+Monster Sushi Table,Brain Jelly Salad,110,,Ticket,66,,,Brain Jelly,Lettuce,Carrot
+Monster Sushi Table,Kraken Stew,,120,Ticket,49,,,Kraken,Carrot,Potato
+Monster Sushi Table,Redfinned Pincher Sushi Roll,45,45,Ticket,25,,,Redfinned Pincher,Seaweed,Rice
+Monster Sushi Table,Ghosthead Tuna Sashimi,25,50,Ticket,25,,,Ghosthead Tuna,,
+Monster Sushi Table,Living Jelly Salad,50,25,Ticket,32,,,Living Jelly,Lettuce,
+Monster Sushi Table,Albino Squid Rings,110,,Ticket,55,,,Albino Squid,Egg,
+Monster Sushi Table,Delvilishly Good Stew,90,90,Ticket,86,,,Devilfin,Onion,Pepper
+Monster Sushi Table,Duorado Double Roll,40,40,Ticket,29,,,Duorado,Seaweed,Rice
+Monster Sushi Table,Water Bear Soup,50,60,Ticket,38,,,Water Bear,Corn,Greenroot
+Monster Sushi Table,Viperfish Sashimi,50,,Ticket,18,,,Viperfish,,
+Soda Machine,Moonplant Cola,100,,Ticket,28,,,Empty Soda Can,Moonplant,
+Soda Machine,Eggplant Cola,100,,Ticket,48,,,Empty Soda Can,Eggplant,
+Soda Machine,Spikey Soda,30,,Ticket,10,,,Empty Soda Can,Spiked Salmon,
+Soda Machine,Soul Fizz,150,,Ticket,60,,,Empty Soda Can,Soul Orb,
+Soda Machine,Pumpkin Soda,30,,Ticket,9,,,Empty Soda Can,Jack'o'fin,
+Soda Machine,Tombmelon Soda,,95,Ticket,30,,,Empty Soda Can,Tombmelon,
+Soda Machine,Kraken Cola,65,,Ticket,26,,,Empty Soda Can,Kraken Kale,
+Soda Machine,Sucker Soda,100,,Ticket,50,,,Empty Soda Can,Suckerstem,
+Soda Machine,Sweet Melon Soda,30,,Ticket,16,,,Empty Soda Can,Tombmelon,
+Soda Machine,Candy Corn Fruit Pop,15,45,Ticket,5,Health,small,Empty Soda Can,Candy Corn Fruit,
+Soda Machine,Monster Fruit Fuel,,45,Ticket,10,Temp Speed ,,Empty Soda Can,Monster Fruit,
+Soda Machine,Sour Plum Soda,45,,Ticket,7,Temp Speed ,,Empty Soda Can,Sour Plum,
+Jam Maker,Apple Jam,,,Gold,290,,,Apple,Sugar,Mana
+Jam Maker,Banana Jam,,,Gold,420,,,Squashed Banana,Sugar,Mana
+Jam Maker,Blueberry Jam,,,Gold,390,,,Blueberry,Sugar,Mana
+Jam Maker,Cinnaberry Jam,,,Gold,1260,,,Cinnaberry,Fire Crystal,Mana
+Jam Maker,Dragon Fruit,,,Mana Orb,35,,,Dragon Fruit Jam,Earth Crystal,Mana
+Jam Maker,Golden Pomegranate Jam,,,Gold,1750,,,Golden Pomegranate,Mana,
+Jam Maker,Grape Jam,,,Gold,429,,,Grapes,Sugar,Mana
+Jam Maker,Guava Jam,,,Gold,450,,,Guava Berry,Sugar,
+Jam Maker,Lemon Jam,,,Gold,650,,,Lemon,Sugar,
+Jam Maker,Mana Gem Jam,,,Mana Orb,28,,,Mana Gem,Water Crystal,Mana
+Jam Maker,Monster Fruit Jam,,,Ticket,26,,,Monster Fruit,Sugar,Mana
+Jam Maker,Nectar-ine Jam,,,Mana Orb,14,,,Nectar-ine,Sugar,Mana
+Jam Maker,Orange Jam,,,Gold,390,,,Orange,Sugar,Mana
+Jam Maker,Peach Jam,,,Gold,625,,,Peach,Sugar,Mana
+Jam Maker,Pineapple Jam,,,Gold,500,,,Pineapple,Sugar,
+Jam Maker,Pricklepop Pear Jam,,,Gold,695,,,Pricklepop Pear,Mana,
+Jam Maker,Pricklelot Pear Jam,,,Gold,695,,,Prickletot Pear Jam,Mana,
+Jam Maker,Raspberry Jam,,,Gold,550,,,Raspberry,Sugar,Mana
+Jam Maker,Shimmeroot Jam,,,Gold,1250,,,Shimmeroot,Fire Crystal,Mana
+Jam Maker,Soul Orb Jam,,,Gold,10000,,,Soul Orb,Sparkling Dust,Mana
+Jam Maker,Sour Plum Jam,,,Ticket,22,,,Soup Plum,Sugar,Mana
+Jam Maker,Strawberry Jam,,,Gold,448,,,Strawberry,Sugar,Mana
+Jam Maker,Sugar Plum Jam,,,Mana Orb,28,,,Sugar Plum ,Sugar,Mana
+Jam Maker,Tomato Jam,,,Gold,925,,,Tomato,Sugar,Mana
+Jam Maker,Tombmelon Jam,,,Ticket,34,,,Tombmelon,Mana,
+Jam Maker,Triangle Jam,,,Gold,850,,,Pythagorean Berry,Sugar,
